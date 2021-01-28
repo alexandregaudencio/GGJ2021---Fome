@@ -1,0 +1,27 @@
+{
+	"name": "boat",
+	"plugin-id": "Tilemap",
+	"sid": 903458026468486,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "jumpthru",
+			"name": "Jumpthru",
+			"sid": 930091241985525
+		}
+	],
+	"effectTypes": [],
+	"image": {
+		"width": 352,
+		"height": 224,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "png",
+		"exportQuality": 0.8,
+		"imageSpriteId": 250808,
+		"useCollisionPoly": true
+	},
+	"tile-collision-polys": {}
+}

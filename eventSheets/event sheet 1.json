@@ -1,5 +1,50 @@
 {
 	"name": "Event sheet 1",
-	"events": [],
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "Yplus",
+			"type": "number",
+			"initialValue": "150",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 648090089683889
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 634449127865360
+				}
+			],
+			"actions": [],
+			"sid": 162040494537169
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 262705332860206
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position",
+					"objectClass": "startPosition",
+					"sid": 154679263415324,
+					"parameters": {
+						"x": "lerp(startPosition.X, player.X, 0.01)",
+						"y": "lerp(startPosition.Y, player.Y -Yplus, 0.05)"
+					}
+				}
+			],
+			"sid": 130295842964795
+		}
+	],
 	"sid": 916221189026207
 }
