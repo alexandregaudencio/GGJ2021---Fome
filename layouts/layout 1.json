@@ -57,11 +57,11 @@
 					"effects": {
 						"Water": {
 							"parameters": {
-								"speed": 0.36,
-								"x-speed": 0.08,
+								"speed": 0.12,
+								"x-speed": 0.3,
 								"y-speed": 0.08,
 								"intensity": 1,
-								"frequency": 10,
+								"frequency": 4,
 								"angle": 7,
 								"delta": 60,
 								"reflectivity": 1200,
@@ -116,34 +116,6 @@
 			"overriden": 0,
 			"instances": [],
 			"sid": 564274695995815,
-			"effectTypes": [],
-			"isInitiallyVisible": true,
-			"color": [
-				1,
-				1,
-				1,
-				1
-			],
-			"backgroundColor": [
-				0.3686274509803922,
-				0.3686274509803922,
-				0.3686274509803922,
-				1
-			],
-			"isTransparent": true,
-			"parallaxX": 1,
-			"parallaxY": 1,
-			"scaleRate": 1,
-			"forceOwnTexture": false,
-			"useRenderCells": false,
-			"blendMode": "normal",
-			"global": false
-		},
-		{
-			"name": "watter",
-			"overriden": 0,
-			"instances": [],
-			"sid": 733850492274605,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"color": [
