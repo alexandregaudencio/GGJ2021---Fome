@@ -31,6 +31,30 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "Keyboard",
+			"name": "Keyboard",
+			"author": "Scirra",
+			"version": "r225",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Text",
+			"name": "Text",
+			"author": "Scirra",
+			"version": "r225",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Bullet",
+			"name": "Bullet",
+			"author": "Scirra",
+			"version": "r225",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "jumpthru",
 			"name": "Jump-thru",
@@ -68,19 +92,29 @@
 		"items": [
 			"boat",
 			"startPosition",
-			"player"
+			"player",
+			"Keyboard",
+			"Text"
 		],
 		"subfolders": [
 			{
-				"items": [
-					"Background",
-					"water"
-				],
+				"items": [],
 				"subfolders": [
 					{
-						"items": [],
+						"items": [
+							"Background",
+							"water"
+						],
 						"subfolders": [],
 						"name": "background"
+					},
+					{
+						"items": [
+							"nuvens",
+							"spawnNuvens"
+						],
+						"subfolders": [],
+						"name": "objects"
 					}
 				],
 				"name": "scenary"
@@ -123,7 +157,13 @@
 			"subfolders": []
 		},
 		"font": {
-			"items": [],
+			"items": [
+				{
+					"name": "PirataOne-Regular.ttf",
+					"type": "application/font-sfnt",
+					"sid": 240544072779672
+				}
+			],
 			"subfolders": []
 		},
 		"icon": {

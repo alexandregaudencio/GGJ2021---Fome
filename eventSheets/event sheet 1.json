@@ -12,6 +12,16 @@
 			"sid": 648090089683889
 		},
 		{
+			"eventType": "variable",
+			"name": "NuvemSpeed",
+			"type": "number",
+			"initialValue": "0.1",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 272413849124875
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -21,7 +31,93 @@
 				}
 			],
 			"actions": [],
-			"sid": 162040494537169
+			"sid": 162040494537169,
+			"children": [
+				{
+					"eventType": "variable",
+					"name": "initialSpawnCloudPositionOffset",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 535425135427662
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for",
+							"objectClass": "System",
+							"sid": 798559548773920,
+							"parameters": {
+								"name": "\"loopCloud\"",
+								"start-index": "1",
+								"end-index": "20"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "spawnNuvens",
+							"sid": 929975196702330,
+							"parameters": {
+								"object": "nuvens",
+								"layer": "1",
+								"image-point": "choose(0,1,2,3,4)"
+							}
+						}
+					],
+					"sid": 814266891389836,
+					"disabled": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for-each",
+									"objectClass": "System",
+									"sid": 765863556386176,
+									"parameters": {
+										"object": "nuvens"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "nuvens",
+									"sid": 761206694830545,
+									"parameters": {
+										"frame-number": "choose(0,1,2,3,4,5)"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "nuvens",
+									"sid": 675156402446753,
+									"parameters": {
+										"x": "spawnNuvens.X-initialSpawnCloudPositionOffset",
+										"y": "spawnNuvens.Y"
+									}
+								},
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 972745295369678,
+									"parameters": {
+										"variable": "initialSpawnCloudPositionOffset",
+										"value": "loopindex*32"
+									}
+								}
+							],
+							"sid": 663492199460697,
+							"disabled": true
+						}
+					]
+				}
+			]
 		},
 		{
 			"eventType": "block",
@@ -36,7 +132,7 @@
 				{
 					"id": "set-position",
 					"objectClass": "startPosition",
-					"sid": 716503766221156,
+					"sid": 175290790199407,
 					"parameters": {
 						"x": "lerp(startPosition.X, player.X, 0.02)",
 						"y": "lerp(startPosition.Y, player.Y -Yplus, 0.05)"
@@ -44,6 +140,390 @@
 				}
 			],
 			"sid": 130295842964795
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "States",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-on-floor",
+							"objectClass": "player",
+							"sid": 535029108310289,
+							"behaviorType": "Platform"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "player",
+							"sid": 432904034178061,
+							"parameters": {
+								"instance-variable": "Jumping",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 833533397423029
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 661617327967879
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "player",
+							"sid": 420199264029122,
+							"parameters": {
+								"instance-variable": "Jumping",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 370366934961424
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-moving",
+							"objectClass": "player",
+							"sid": 815620196815967,
+							"behaviorType": "Platform"
+						},
+						{
+							"id": "is-jumping",
+							"objectClass": "player",
+							"sid": 310477034504469,
+							"behaviorType": "Platform",
+							"isInverted": true
+						},
+						{
+							"id": "is-falling",
+							"objectClass": "player",
+							"sid": 418732447534803,
+							"behaviorType": "Platform",
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "player",
+							"sid": 844309878746995,
+							"parameters": {
+								"instance-variable": "walking",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 236490401284853
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 945857174587122
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "player",
+							"sid": 360592112128362,
+							"parameters": {
+								"instance-variable": "walking",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 375563433934664
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 629987187403624,
+							"parameters": {
+								"key": 37
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "player",
+							"sid": 610170283976874,
+							"parameters": {
+								"instance-variable": "diretion",
+								"value": "-1"
+							}
+						},
+						{
+							"id": "set-mirrored",
+							"objectClass": "player",
+							"sid": 856530715184054,
+							"parameters": {
+								"state": "mirrored"
+							}
+						}
+					],
+					"sid": 746219435012105
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 115973981904325,
+							"parameters": {
+								"key": 39
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "player",
+							"sid": 765700429795982,
+							"parameters": {
+								"instance-variable": "diretion",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-mirrored",
+							"objectClass": "player",
+							"sid": 742113411489470,
+							"parameters": {
+								"state": "not-mirrored"
+							}
+						}
+					],
+					"sid": 382308683474683
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "player",
+							"sid": 227830799762383,
+							"parameters": {
+								"instance-variable": "Jumping"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "player",
+							"sid": 321753249200457,
+							"parameters": {
+								"instance-variable": "walking"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "player",
+							"sid": 952284920987875,
+							"parameters": {
+								"instance-variable": "idle",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 139968228250779
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 291237802607427
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "player",
+							"sid": 425541290879296,
+							"parameters": {
+								"instance-variable": "idle",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 728068885866404
+				}
+			],
+			"sid": 683554721190952
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Animation'sPlayer",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "player",
+							"sid": 978974411508243,
+							"parameters": {
+								"instance-variable": "idle"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "player",
+							"sid": 593172192957662,
+							"parameters": {
+								"animation": "\"idle\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 766516363382785
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "player",
+							"sid": 676405814736331,
+							"parameters": {
+								"instance-variable": "Jumping"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "player",
+							"sid": 550570503542527,
+							"parameters": {
+								"animation": "\"jump\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 872767282803364
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "player",
+							"sid": 732565632553419,
+							"parameters": {
+								"instance-variable": "walking"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "player",
+							"sid": 481166752700248,
+							"parameters": {
+								"animation": "\"jump\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 892441847774547
+				}
+			],
+			"sid": 948508962861766
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "BG objects",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [],
+			"sid": 859016813683724
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Configurations",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 133556097621763,
+							"parameters": {
+								"interval-seconds": "random(10,13)"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "spawnNuvens",
+							"sid": 766680435219364,
+							"parameters": {
+								"object": "nuvens",
+								"layer": "1",
+								"image-point": "choose(0,1,2,3,4)"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "nuvens",
+							"sid": 790799540531454,
+							"parameters": {
+								"frame-number": "choose(1,2,3,4,5,6)"
+							}
+						},
+						{
+							"id": "set-speed",
+							"objectClass": "nuvens",
+							"sid": 889914767190795,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"speed": "nuvens.Bullet.Speed*(nuvens.AnimationFrame*NuvemSpeed)"
+							}
+						}
+					],
+					"sid": 353339354251026
+				}
+			],
+			"sid": 614350468335555
 		}
 	],
 	"sid": 916221189026207

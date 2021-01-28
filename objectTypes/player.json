@@ -3,7 +3,32 @@
 	"plugin-id": "Sprite",
 	"sid": 488641072389005,
 	"isGlobal": false,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "Jumping",
+			"type": "boolean",
+			"desc": "",
+			"sid": 767235798171953
+		},
+		{
+			"name": "walking",
+			"type": "boolean",
+			"desc": "",
+			"sid": 640239771800541
+		},
+		{
+			"name": "diretion",
+			"type": "number",
+			"desc": "",
+			"sid": 622758371906741
+		},
+		{
+			"name": "idle",
+			"type": "boolean",
+			"desc": "",
+			"sid": 822189349189579
+		}
+	],
 	"behaviorTypes": [
 		{
 			"behaviorId": "Platform",
@@ -24,18 +49,64 @@
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 4511454,
+						"imageSpriteId": 2233211,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
 				"sid": 969932897870373,
-				"name": "Animation 1",
+				"name": "idle",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,
 				"repeatTo": 0,
-				"speed": 5
+				"speed": 8
+			},
+			{
+				"frames": [
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6294368,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 286043006542257,
+				"name": "jump",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 16
+			},
+			{
+				"frames": [
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6709462,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 894929749671002,
+				"name": "walk",
+				"isLooping": true,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 15
 			}
 		],
 		"subfolders": []

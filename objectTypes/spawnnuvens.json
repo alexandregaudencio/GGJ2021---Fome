@@ -1,0 +1,59 @@
+{
+	"name": "spawnNuvens",
+	"plugin-id": "Sprite",
+	"sid": 782791583129690,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 250,
+						"height": 500,
+						"originX": 0.5,
+						"originY": 0,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5995186,
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Image Point 1",
+								"x": 0.5,
+								"y": 0.25
+							},
+							{
+								"name": "Image Point 2",
+								"x": 0.5,
+								"y": 0.5
+							},
+							{
+								"name": "Image Point 3",
+								"x": 0.524,
+								"y": 0.702
+							},
+							{
+								"name": "Image Point 4",
+								"x": 0.5,
+								"y": 1
+							}
+						],
+						"duration": 1
+					}
+				],
+				"sid": 420535513797268,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

@@ -1,0 +1,163 @@
+{
+	"name": "nuvens",
+	"plugin-id": "Sprite",
+	"sid": 921651971453020,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Bullet",
+			"name": "Bullet",
+			"sid": 219672024111400
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 269,
+						"height": 159,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7043970,
+						"collisionPoly": {
+							"points": [
+								0.02102061507265968,
+								0,
+								1,
+								0,
+								1,
+								1,
+								0.02102061507265968,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 269,
+						"height": 159,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7364516,
+						"collisionPoly": {
+							"points": [
+								0.02102061507265968,
+								0,
+								1,
+								0,
+								1,
+								1,
+								0.02102061507265968,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 325,
+						"height": 119,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8116730,
+						"collisionPoly": {
+							"points": [
+								0.017398601398601398,
+								0,
+								1,
+								0,
+								1,
+								1,
+								0.017398601398601398,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 335,
+						"height": 127,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1591263,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 195,
+						"height": 105,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2582396,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 193,
+						"height": 83,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 177769,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 251,
+						"height": 69,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 3162076,
+						"collisionPoly": {
+							"points": [
+								0.02252806954002173,
+								0,
+								1,
+								0,
+								1,
+								1,
+								0.02252806954002173,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 455824175910062,
+				"name": "nuvens",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}
