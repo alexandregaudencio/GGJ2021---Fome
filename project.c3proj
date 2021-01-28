@@ -8,14 +8,6 @@
 	"usedAddons": [
 		{
 			"type": "plugin",
-			"id": "Tilemap",
-			"name": "Tilemap",
-			"author": "Scirra",
-			"version": "r225",
-			"bundled": false
-		},
-		{
-			"type": "plugin",
 			"id": "TiledBg",
 			"name": "Tiled Background",
 			"author": "Scirra",
@@ -26,6 +18,14 @@
 			"type": "plugin",
 			"id": "Sprite",
 			"name": "Sprite",
+			"author": "Scirra",
+			"version": "r225",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Tilemap",
+			"name": "Tilemap",
 			"author": "Scirra",
 			"version": "r225",
 			"bundled": false
@@ -67,12 +67,25 @@
 	"objectTypes": {
 		"items": [
 			"boat",
-			"TiledBackground",
-			"Background",
 			"startPosition",
 			"player"
 		],
-		"subfolders": []
+		"subfolders": [
+			{
+				"items": [
+					"Background",
+					"water"
+				],
+				"subfolders": [
+					{
+						"items": [],
+						"subfolders": [],
+						"name": "background"
+					}
+				],
+				"name": "scenary"
+			}
+		]
 	},
 	"autosaveData": null,
 	"containers": [],

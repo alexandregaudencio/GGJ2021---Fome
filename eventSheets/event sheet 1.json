@@ -36,9 +36,9 @@
 				{
 					"id": "set-position",
 					"objectClass": "startPosition",
-					"sid": 154679263415324,
+					"sid": 716503766221156,
 					"parameters": {
-						"x": "lerp(startPosition.X, player.X, 0.01)",
+						"x": "lerp(startPosition.X, player.X, 0.02)",
 						"y": "lerp(startPosition.Y, player.Y -Yplus, 0.05)"
 					}
 				}
