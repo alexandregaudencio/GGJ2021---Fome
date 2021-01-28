@@ -1,11 +1,16 @@
 {
-	"name": "Background",
+	"name": "waterBG",
 	"plugin-id": "TiledBg",
-	"sid": 773057454494410,
+	"sid": 884774264128983,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
-	"effectTypes": [],
+	"effectTypes": [
+		{
+			"effectId": "water",
+			"name": "Water"
+		}
+	],
 	"image": {
 		"width": 1280,
 		"height": 720,
@@ -14,7 +19,7 @@
 		"originalSource": "",
 		"exportFormat": "png",
 		"exportQuality": 0.8,
-		"imageSpriteId": 3899161,
+		"imageSpriteId": 7281280,
 		"useCollisionPoly": true
 	}
 }

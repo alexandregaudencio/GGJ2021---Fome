@@ -1,0 +1,59 @@
+{
+	"name": "SpawnCloudUp",
+	"plugin-id": "Sprite",
+	"sid": 116657082242823,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 10,
+						"height": 10,
+						"originX": 0.5,
+						"originY": 0,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5553296,
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Image Point 1",
+								"x": 0.5,
+								"y": 0.3
+							},
+							{
+								"name": "Image Point 2",
+								"x": 0.5,
+								"y": 0.5
+							},
+							{
+								"name": "Image Point 3",
+								"x": 0.5,
+								"y": 0.8
+							},
+							{
+								"name": "Image Point 4",
+								"x": 0.5,
+								"y": 1
+							}
+						],
+						"duration": 1
+					}
+				],
+				"sid": 473366218558337,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

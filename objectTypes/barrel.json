@@ -1,0 +1,57 @@
+{
+	"name": "barrel",
+	"plugin-id": "Sprite",
+	"sid": 671449347485176,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 111,
+						"height": 126,
+						"originX": 0.5495495495495496,
+						"originY": 0.7063492063492064,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4324996,
+						"collisionPoly": {
+							"points": [
+								0.02702702702702703,
+								0.4444444444444444,
+								0.5495495495495496,
+								0.007936507936507936,
+								0.9459459459459459,
+								0.5476190476190477,
+								0.9099099099099099,
+								0.7063492063492064,
+								0.8738738738738738,
+								0.7936507936507936,
+								0.5495495495495496,
+								0.9841269841269841,
+								0.13513513513513514,
+								0.8650793650793651,
+								0.08108108108108121,
+								0.7063492063492064
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 660007904729475,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

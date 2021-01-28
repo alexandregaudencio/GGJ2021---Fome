@@ -60,7 +60,7 @@
 					"actions": [
 						{
 							"id": "spawn-another-object",
-							"objectClass": "spawnNuvens",
+							"objectClass": "spawnCloudDown",
 							"sid": 929975196702330,
 							"parameters": {
 								"object": "nuvens",
@@ -98,8 +98,8 @@
 									"objectClass": "nuvens",
 									"sid": 675156402446753,
 									"parameters": {
-										"x": "spawnNuvens.X-initialSpawnCloudPositionOffset",
-										"y": "spawnNuvens.Y"
+										"x": "spawnCloudDown.X-initialSpawnCloudPositionOffset",
+										"y": "spawnCloudDown.Y"
 									}
 								},
 								{
@@ -485,17 +485,17 @@
 						{
 							"id": "every-x-seconds",
 							"objectClass": "System",
-							"sid": 133556097621763,
+							"sid": 505495389700694,
 							"parameters": {
-								"interval-seconds": "random(10,13)"
+								"interval-seconds": "random(2,4)"
 							}
 						}
 					],
 					"actions": [
 						{
 							"id": "spawn-another-object",
-							"objectClass": "spawnNuvens",
-							"sid": 766680435219364,
+							"objectClass": "spawnCloudDown",
+							"sid": 951981247979949,
 							"parameters": {
 								"object": "nuvens",
 								"layer": "1",
@@ -505,9 +505,9 @@
 						{
 							"id": "set-animation-frame",
 							"objectClass": "nuvens",
-							"sid": 790799540531454,
+							"sid": 909609475025770,
 							"parameters": {
-								"frame-number": "choose(1,2,3,4,5,6)"
+								"frame-number": "choose(1,2,3)"
 							}
 						},
 						{
@@ -521,9 +521,118 @@
 						}
 					],
 					"sid": 353339354251026
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 297534909838576,
+							"parameters": {
+								"interval-seconds": "random(2,4)"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "SpawnCloudUp",
+							"sid": 690730385661897,
+							"parameters": {
+								"object": "nuvens",
+								"layer": "1",
+								"image-point": "choose(0,1,2,3,4)"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "nuvens",
+							"sid": 801124539526422,
+							"parameters": {
+								"frame-number": "choose(4,5,6)"
+							}
+						},
+						{
+							"id": "set-speed",
+							"objectClass": "nuvens",
+							"sid": 305484847956980,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"speed": "nuvens.Bullet.Speed*(nuvens.AnimationFrame*NuvemSpeed)"
+							}
+						}
+					],
+					"sid": 272777496363324
 				}
 			],
 			"sid": 614350468335555
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Mouse",
+					"sid": 142720608668083,
+					"parameters": {
+						"object": "UI"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "tween-two-properties",
+					"objectClass": "UI",
+					"sid": 114639076916546,
+					"disabled": true,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"UIAnim\"",
+						"property": "scale",
+						"end-x": "2",
+						"end-y": "2",
+						"time": "1",
+						"ease": "easeoutelastic",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no"
+					}
+				}
+			],
+			"sid": 396202001454146,
+			"disabled": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 844024253376661
+				}
+			],
+			"actions": [
+				{
+					"id": "tween-two-properties",
+					"objectClass": "UI",
+					"sid": 233406118593017,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"UIAnim\"",
+						"property": "scale",
+						"end-x": "1",
+						"end-y": "1",
+						"time": "1",
+						"ease": "easeoutelastic",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no"
+					}
+				}
+			],
+			"sid": 604189731291045,
+			"disabled": true
 		}
 	],
 	"sid": 916221189026207

@@ -1,0 +1,17 @@
+{
+	"name": "UI",
+	"plugin-id": "Sprite",
+	"sid": 134398652916502,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 275877154061883
+		}
+	],
+	"effectTypes": [],
+	"members": [
+		"barrel"
+	]
+}
