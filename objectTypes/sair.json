@@ -1,0 +1,63 @@
+{
+	"name": "sair",
+	"plugin-id": "Sprite",
+	"sid": 428110983648091,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 614079249346186
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 79,
+						"height": 79,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5429714,
+						"collisionPoly": {
+							"points": [
+								0.1518987341772152,
+								0.1518987341772152,
+								0.5,
+								0,
+								0.8481012658227848,
+								0.13924050632911392,
+								0.9873417721518988,
+								0.5,
+								0.8481012658227848,
+								0.8481012658227848,
+								0.5,
+								0.9873417721518988,
+								0.1518987341772152,
+								0.8354430379746836,
+								0,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 345785439596411,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

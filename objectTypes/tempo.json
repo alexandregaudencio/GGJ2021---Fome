@@ -1,0 +1,15 @@
+{
+	"name": "tempo",
+	"plugin-id": "Text",
+	"sid": 567038918999117,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Timer",
+			"name": "Timer",
+			"sid": 971468901651061
+		}
+	],
+	"effectTypes": []
+}

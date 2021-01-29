@@ -1,0 +1,80 @@
+{
+	"name": "Event sheet menu",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 316232820612077,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "Menu_botao"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "tween-two-properties",
+					"objectClass": "Menu_botao",
+					"sid": 489641241220807,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "scale",
+						"end-x": "1.2",
+						"end-y": "1.2",
+						"time": "0.5",
+						"ease": "easeoutelastic",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "yes"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 136987897880086,
+					"parameters": {
+						"seconds": "1.0"
+					}
+				},
+				{
+					"id": "set-fade-in-time",
+					"objectClass": "Menu_transicao",
+					"sid": 267238056060663,
+					"behaviorType": "Fade",
+					"parameters": {
+						"fade-in-time": "1"
+					}
+				},
+				{
+					"id": "start-fade",
+					"objectClass": "Menu_transicao",
+					"sid": 965084518716653,
+					"behaviorType": "Fade"
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 942238916585569,
+					"parameters": {
+						"seconds": "1.0"
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 253060596232451,
+					"parameters": {
+						"layout": "Layout 1"
+					}
+				}
+			],
+			"sid": 612111110866425
+		}
+	],
+	"sid": 859898327137018
+}

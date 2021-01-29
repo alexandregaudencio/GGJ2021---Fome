@@ -1,0 +1,57 @@
+{
+	"name": "Menu_pausar",
+	"plugin-id": "Sprite",
+	"sid": 256178382463354,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 607,
+						"height": 881,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4250392,
+						"collisionPoly": {
+							"points": [
+								0.20922570016474465,
+								0.1441543700340522,
+								0.5,
+								0.20771850170261066,
+								0.7924217462932455,
+								0.14188422247446084,
+								0.9983525535420099,
+								0.5,
+								0.8154859967051071,
+								0.8728717366628831,
+								0.5,
+								0.7332576617480137,
+								0.17627677100494235,
+								0.8774120317820658,
+								0,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 796824497306575,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

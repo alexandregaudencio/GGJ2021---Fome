@@ -1,0 +1,15 @@
+{
+	"name": "contadorDeMoedas",
+	"plugin-id": "Text",
+	"sid": 294461213224665,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Timer",
+			"name": "Timer",
+			"sid": 582562900184872
+		}
+	],
+	"effectTypes": []
+}

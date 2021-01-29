@@ -1,0 +1,15 @@
+{
+	"name": "Menu_jogar",
+	"plugin-id": "Text",
+	"sid": 925339911054802,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 498016216914778
+		}
+	],
+	"effectTypes": []
+}

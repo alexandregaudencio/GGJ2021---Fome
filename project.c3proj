@@ -80,6 +80,30 @@
 		},
 		{
 			"type": "behavior",
+			"id": "Tween",
+			"name": "Tween",
+			"author": "Scirra",
+			"version": "r225",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Fade",
+			"name": "Fade",
+			"author": "Scirra",
+			"version": "r225",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Timer",
+			"name": "Timer",
+			"author": "Scirra",
+			"version": "r225",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "jumpthru",
 			"name": "Jump-thru",
 			"author": "Scirra",
@@ -103,22 +127,6 @@
 			"bundled": false
 		},
 		{
-			"type": "behavior",
-			"id": "Tween",
-			"name": "Tween",
-			"author": "Scirra",
-			"version": "r225",
-			"bundled": false
-		},
-		{
-			"type": "behavior",
-			"id": "Timer",
-			"name": "Timer",
-			"author": "Scirra",
-			"version": "r225",
-			"bundled": false
-		},
-		{
 			"type": "effect",
 			"id": "water",
 			"name": "Water",
@@ -133,11 +141,11 @@
 			"boat",
 			"startPosition",
 			"player",
-			"Text",
 			"flag",
 			"enemy1",
 			"enemyImpulse",
-			"zoneLimiter"
+			"zoneLimiter",
+			"moeda"
 		],
 		"subfolders": [
 			{
@@ -167,6 +175,28 @@
 				],
 				"subfolders": [],
 				"name": "object"
+			},
+			{
+				"items": [
+					"Menu_botao",
+					"Menu_jogar",
+					"Menu_transicao"
+				],
+				"subfolders": [],
+				"name": "Menu"
+			},
+			{
+				"items": [
+					"configuracao",
+					"contadorDeMoedas",
+					"Menu_pausar",
+					"tempo",
+					"retornar",
+					"sair",
+					"pausado"
+				],
+				"subfolders": [],
+				"name": "HUD do jogo"
 			}
 		]
 	},
@@ -181,13 +211,15 @@
 	},
 	"layouts": {
 		"items": [
-			"Layout 1"
+			"Layout 1",
+			"Menu"
 		],
 		"subfolders": []
 	},
 	"eventSheets": {
 		"items": [
-			"Event sheet 1"
+			"Event sheet 1",
+			"Event sheet menu"
 		],
 		"subfolders": []
 	},
@@ -197,7 +229,18 @@
 			"subfolders": []
 		},
 		"sound": {
-			"items": [],
+			"items": [
+				{
+					"name": "som botao arrumado.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 198801006624105
+				},
+				{
+					"name": "som da moeda.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 746464088975629
+				}
+			],
 			"subfolders": []
 		},
 		"music": {

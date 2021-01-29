@@ -1,0 +1,26 @@
+{
+	"name": "Menu_transicao",
+	"plugin-id": "TiledBg",
+	"sid": 480799881604440,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Fade",
+			"name": "Fade",
+			"sid": 398176394521460
+		}
+	],
+	"effectTypes": [],
+	"image": {
+		"width": 250,
+		"height": 250,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "png",
+		"exportQuality": 0.8,
+		"imageSpriteId": 3778070,
+		"useCollisionPoly": true
+	}
+}
