@@ -5,7 +5,7 @@
 			"eventType": "variable",
 			"name": "Yplus",
 			"type": "number",
-			"initialValue": "150",
+			"initialValue": "100",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
@@ -30,7 +30,21 @@
 					"sid": 634449127865360
 				}
 			],
-			"actions": [],
+			"actions": [
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 896604215013886,
+					"parameters": {
+						"seconds": "2"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "nuvens",
+					"sid": 833788295406379
+				}
+			],
 			"sid": 162040494537169,
 			"children": [
 				{
@@ -123,23 +137,39 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "every-tick",
+					"id": "every-x-seconds",
 					"objectClass": "System",
-					"sid": 262705332860206
+					"sid": 688785320017892,
+					"parameters": {
+						"interval-seconds": "1.0*dt"
+					}
 				}
 			],
 			"actions": [
 				{
 					"id": "set-position",
 					"objectClass": "startPosition",
-					"sid": 175290790199407,
+					"sid": 396469023363609,
 					"parameters": {
 						"x": "lerp(startPosition.X, player.X, 0.02)",
 						"y": "lerp(startPosition.Y, player.Y -Yplus, 0.05)"
 					}
 				}
 			],
-			"sid": 130295842964795
+			"sid": 552830254427955
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 262705332860206
+				}
+			],
+			"actions": [],
+			"sid": 130295842964795,
+			"disabled": true
 		},
 		{
 			"eventType": "group",
@@ -633,6 +663,243 @@
 			],
 			"sid": 604189731291045,
 			"disabled": true
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "enemy",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "enemies",
+							"sid": 696997838114980,
+							"parameters": {
+								"instance-variable": "diretionH",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "enemies",
+							"sid": 889680796147788,
+							"behaviorType": "Platform",
+							"parameters": {
+								"control": "right"
+							}
+						},
+						{
+							"id": "set-mirrored",
+							"objectClass": "enemies",
+							"sid": 931944695808910,
+							"parameters": {
+								"state": "not-mirrored"
+							}
+						}
+					],
+					"sid": 819899604834590
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "enemies",
+							"sid": 735573716730991,
+							"parameters": {
+								"instance-variable": "diretionH",
+								"comparison": 0,
+								"value": "-1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "enemies",
+							"sid": 658152932923825,
+							"behaviorType": "Platform",
+							"parameters": {
+								"control": "left"
+							}
+						},
+						{
+							"id": "set-mirrored",
+							"objectClass": "enemies",
+							"sid": 596315453839607,
+							"parameters": {
+								"state": "mirrored"
+							}
+						}
+					],
+					"sid": 812706075616366
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "enemies",
+							"sid": 535399865126451,
+							"parameters": {
+								"object": "enemyImpulse"
+							}
+						},
+						{
+							"id": "is-timer-running",
+							"objectClass": "enemies",
+							"sid": 803326645459188,
+							"behaviorType": "Timer",
+							"parameters": {
+								"tag": "\"JumpTimer\""
+							},
+							"isInverted": true
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 817294878876419,
+							"parameters": {
+								"first-value": "(player.Y)-(enemies.Y)",
+								"comparison": 3,
+								"second-value": "200"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 554656668885240,
+							"parameters": {
+								"first-value": "((player.X)-(enemies.X))*enemies.diretionH",
+								"comparison": 4,
+								"second-value": "0"
+							}
+						},
+						{
+							"id": "is-on-floor",
+							"objectClass": "player",
+							"sid": 196163782248686,
+							"behaviorType": "Platform"
+						}
+					],
+					"actions": [
+						{
+							"id": "start-timer",
+							"objectClass": "enemies",
+							"sid": 897445503492866,
+							"behaviorType": "Timer",
+							"parameters": {
+								"duration": "1.0",
+								"type": "once",
+								"tag": "\"JumpTimer\""
+							}
+						},
+						{
+							"id": "simulate-control",
+							"objectClass": "enemies",
+							"sid": 867572248710845,
+							"behaviorType": "Platform",
+							"parameters": {
+								"control": "jump"
+							}
+						}
+					],
+					"sid": 554959948733265
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "enemies",
+							"sid": 431799603170775,
+							"parameters": {
+								"object": "zoneLimiter"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 917531978782195,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "enemies",
+									"sid": 103367596204225,
+									"parameters": {
+										"instance-variable": "diretionH",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "enemies",
+									"sid": 291914699844510,
+									"parameters": {
+										"instance-variable": "diretionH",
+										"value": "-1"
+									}
+								}
+							],
+							"sid": 747912194094074
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 528525333955407
+								}
+							],
+							"actions": [],
+							"sid": 466705014807106,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "enemies",
+											"sid": 252958445489234,
+											"parameters": {
+												"instance-variable": "diretionH",
+												"comparison": 0,
+												"value": "-1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "enemies",
+											"sid": 418795658140257,
+											"parameters": {
+												"instance-variable": "diretionH",
+												"value": "1"
+											}
+										}
+									],
+									"sid": 684333127387877
+								}
+							]
+						}
+					]
+				}
+			],
+			"sid": 733393450647818
 		}
 	],
 	"sid": 916221189026207

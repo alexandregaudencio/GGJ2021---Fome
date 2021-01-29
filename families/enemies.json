@@ -1,0 +1,35 @@
+{
+	"name": "enemies",
+	"plugin-id": "Sprite",
+	"sid": 281884010948794,
+	"instanceVariables": [
+		{
+			"name": "diretionH",
+			"type": "number",
+			"desc": "",
+			"sid": 851791203148739
+		},
+		{
+			"name": "jumping",
+			"type": "boolean",
+			"desc": "",
+			"sid": 191241595528868
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Platform",
+			"name": "Platform",
+			"sid": 339633568226873
+		},
+		{
+			"behaviorId": "Timer",
+			"name": "Timer",
+			"sid": 135890053612573
+		}
+	],
+	"effectTypes": [],
+	"members": [
+		"enemy1"
+	]
+}
