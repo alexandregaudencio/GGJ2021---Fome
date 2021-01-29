@@ -24,6 +24,14 @@
 		},
 		{
 			"type": "plugin",
+			"id": "Tilemap",
+			"name": "Tilemap",
+			"author": "Scirra",
+			"version": "r225",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Keyboard",
 			"name": "Keyboard",
 			"author": "Scirra",
@@ -40,14 +48,6 @@
 		},
 		{
 			"type": "plugin",
-			"id": "Tilemap",
-			"name": "Tilemap",
-			"author": "Scirra",
-			"version": "r225",
-			"bundled": false
-		},
-		{
-			"type": "plugin",
 			"id": "Text",
 			"name": "Text",
 			"author": "Scirra",
@@ -58,6 +58,22 @@
 			"type": "behavior",
 			"id": "Bullet",
 			"name": "Bullet",
+			"author": "Scirra",
+			"version": "r225",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Physics",
+			"name": "Physics",
+			"author": "Scirra",
+			"version": "r225",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "solid",
+			"name": "Solid",
 			"author": "Scirra",
 			"version": "r225",
 			"bundled": false
@@ -114,21 +130,16 @@
 		],
 		"subfolders": [
 			{
-				"items": [],
-				"subfolders": [
-					{
-						"items": [
-							"Background",
-							"water",
-							"nuvens",
-							"spawnCloudDown",
-							"SpawnCloudUp",
-							"waterBG"
-						],
-						"subfolders": [],
-						"name": "background"
-					}
+				"items": [
+					"Background",
+					"nuvens",
+					"spawnCloudDown",
+					"SpawnCloudUp",
+					"water",
+					"waterBG",
+					"BGobjects"
 				],
+				"subfolders": [],
 				"name": "scenary"
 			},
 			{
