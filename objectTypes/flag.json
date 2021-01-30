@@ -4,7 +4,13 @@
 	"sid": 984991459819663,
 	"isGlobal": false,
 	"instanceVariables": [],
-	"behaviorTypes": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Pin",
+			"name": "Pin",
+			"sid": 230193820323426
+		}
+	],
 	"effectTypes": [],
 	"animations": {
 		"items": [
@@ -145,7 +151,7 @@
 				"isPingPong": false,
 				"repeatCount": 1,
 				"repeatTo": 0,
-				"speed": 16
+				"speed": 14
 			}
 		],
 		"subfolders": []

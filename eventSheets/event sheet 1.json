@@ -52,212 +52,310 @@
 			"sid": 304311257666013
 		},
 		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-start-of-layout",
-					"objectClass": "System",
-					"sid": 634449127865360
-				}
-			],
-			"actions": [
-				{
-					"id": "wait",
-					"objectClass": "System",
-					"sid": 896604215013886,
-					"parameters": {
-						"seconds": "2"
-					}
-				},
-				{
-					"id": "destroy",
-					"objectClass": "nuvens",
-					"sid": 833788295406379
-				},
-				{
-					"type": "comment",
-					"text": "HUD"
-				},
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 617249232934006,
-					"parameters": {
-						"variable": "contandoMoedas",
-						"value": "0"
-					}
-				},
-				{
-					"id": "set-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 924305052677595,
-					"parameters": {
-						"variable": "pressionando",
-						"value": "false"
-					}
-				},
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 228761862646369,
-					"parameters": {
-						"variable": "contadordetempo",
-						"value": "60"
-					}
-				},
-				{
-					"id": "set-text",
-					"objectClass": "contadorDeMoedas",
-					"sid": 931679110125463,
-					"parameters": {
-						"text": "contandoMoedas"
-					}
-				},
-				{
-					"id": "start-timer",
-					"objectClass": "tempo",
-					"sid": 706814857106729,
-					"behaviorType": "Timer",
-					"parameters": {
-						"duration": "1.0",
-						"type": "once",
-						"tag": "\"tempo\""
-					}
-				},
-				{
-					"id": "set-text",
-					"objectClass": "tempo",
-					"sid": 821264118699385,
-					"parameters": {
-						"text": "contadordetempo"
-					}
-				}
-			],
-			"sid": 162040494537169,
+			"eventType": "variable",
+			"name": "HeightEnemyImpulse",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 411576617746968
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "StartConfig",
+			"description": "",
+			"isActiveOnStart": true,
 			"children": [
-				{
-					"eventType": "variable",
-					"name": "initialSpawnCloudPositionOffset",
-					"type": "number",
-					"initialValue": "0",
-					"comment": "",
-					"isStatic": false,
-					"isConstant": false,
-					"sid": 535425135427662
-				},
 				{
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "for",
+							"id": "on-start-of-layout",
 							"objectClass": "System",
-							"sid": 798559548773920,
-							"parameters": {
-								"name": "\"loopCloud\"",
-								"start-index": "1",
-								"end-index": "20"
-							}
+							"sid": 795485533515360
 						}
 					],
 					"actions": [
 						{
-							"id": "spawn-another-object",
-							"objectClass": "spawnCloudDown",
-							"sid": 929975196702330,
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 841140219878211,
 							"parameters": {
-								"object": "nuvens",
-								"layer": "1",
-								"image-point": "choose(0,1,2,3,4)"
+								"variable": "HeightEnemyImpulse",
+								"value": "2*enemyImpulse.Height-0.1*enemyImpulse.Height"
 							}
+						},
+						{
+							"callFunction": "StartsPinner",
+							"sid": 640451447415546
+						},
+						{
+							"id": "destroy",
+							"objectClass": "nuvens",
+							"sid": 904724017566543
+						},
+						{
+							"callFunction": "resetUIConfig",
+							"sid": 697151282353324
 						}
 					],
-					"sid": 814266891389836,
-					"disabled": true,
+					"sid": 444400986202435,
 					"children": [
+						{
+							"eventType": "variable",
+							"name": "initialSpawnCloudPositionOffset",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"isStatic": false,
+							"isConstant": false,
+							"sid": 213458895311817
+						},
 						{
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "for-each",
+									"id": "for",
 									"objectClass": "System",
-									"sid": 765863556386176,
+									"sid": 357041892302526,
 									"parameters": {
-										"object": "nuvens"
+										"name": "\"loopCloud\"",
+										"start-index": "1",
+										"end-index": "20"
 									}
 								}
 							],
 							"actions": [
 								{
-									"id": "set-animation-frame",
-									"objectClass": "nuvens",
-									"sid": 761206694830545,
+									"id": "spawn-another-object",
+									"objectClass": "spawnCloudDown",
+									"sid": 964076342301033,
 									"parameters": {
-										"frame-number": "choose(0,1,2,3,4,5)"
-									}
-								},
-								{
-									"id": "set-position",
-									"objectClass": "nuvens",
-									"sid": 675156402446753,
-									"parameters": {
-										"x": "spawnCloudDown.X-initialSpawnCloudPositionOffset",
-										"y": "spawnCloudDown.Y"
-									}
-								},
-								{
-									"id": "add-to-eventvar",
-									"objectClass": "System",
-									"sid": 972745295369678,
-									"parameters": {
-										"variable": "initialSpawnCloudPositionOffset",
-										"value": "loopindex*32"
+										"object": "nuvens",
+										"layer": "1",
+										"image-point": "choose(0,1,2,3,4)"
 									}
 								}
 							],
-							"sid": 663492199460697,
-							"disabled": true
+							"sid": 708798964598226,
+							"disabled": true,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "for-each",
+											"objectClass": "System",
+											"sid": 891788771511386,
+											"parameters": {
+												"object": "nuvens"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation-frame",
+											"objectClass": "nuvens",
+											"sid": 351191022595614,
+											"parameters": {
+												"frame-number": "choose(0,1,2,3,4,5)"
+											}
+										},
+										{
+											"id": "set-position",
+											"objectClass": "nuvens",
+											"sid": 993131705373022,
+											"parameters": {
+												"x": "spawnCloudDown.X-initialSpawnCloudPositionOffset",
+												"y": "spawnCloudDown.Y"
+											}
+										},
+										{
+											"id": "add-to-eventvar",
+											"objectClass": "System",
+											"sid": 680243778140006,
+											"parameters": {
+												"variable": "initialSpawnCloudPositionOffset",
+												"value": "loopindex*32"
+											}
+										}
+									],
+									"sid": 516933106323437,
+									"disabled": true
+								}
+							]
 						}
 					]
-				}
-			]
-		},
-		{
-			"eventType": "block",
-			"conditions": [
+				},
 				{
-					"id": "every-x-seconds",
-					"objectClass": "System",
-					"sid": 688785320017892,
-					"parameters": {
-						"interval-seconds": "1.0*dt"
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 217671799621001,
+							"parameters": {
+								"interval-seconds": "1.0*dt"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position",
+							"objectClass": "startPosition",
+							"sid": 152058299297214,
+							"parameters": {
+								"x": "lerp(startPosition.X, player.X, 0.02)",
+								"y": "lerp(startPosition.Y, player.Y -Yplus, 0.05)"
+							}
+						}
+					],
+					"sid": 604161519544324
+				},
+				{
+					"functionName": "resetUIConfig",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 267203189757904,
+							"parameters": {
+								"variable": "contandoMoedas",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 924071380231362,
+							"parameters": {
+								"variable": "pressionando",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 946252418880724,
+							"parameters": {
+								"variable": "contadordetempo",
+								"value": "600"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "contadorDeMoedas",
+							"sid": 583739943867405,
+							"parameters": {
+								"text": "contandoMoedas"
+							}
+						},
+						{
+							"id": "start-timer",
+							"objectClass": "tempo",
+							"sid": 585752148542736,
+							"behaviorType": "Timer",
+							"parameters": {
+								"duration": "1.0",
+								"type": "once",
+								"tag": "\"tempo\""
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "tempo",
+							"sid": 134307331075861,
+							"parameters": {
+								"text": "contadordetempo"
+							}
+						}
+					],
+					"sid": 520424185773751
+				},
+				{
+					"functionName": "StartsPinner",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "flag",
+							"sid": 246542210455540,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "boat",
+								"x": true,
+								"y": true,
+								"angle": true,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
+						},
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "boat",
+							"sid": 612849489027001,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "zoneLimiter",
+								"x": true,
+								"y": true,
+								"angle": false,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
+						},
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "items",
+							"sid": 715975712692551,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "boat",
+								"x": true,
+								"y": true,
+								"angle": false,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
+						},
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "enemyImpulse",
+							"sid": 127254584855459,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "boat",
+								"x": true,
+								"y": true,
+								"angle": true,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
+						}
+					],
+					"sid": 727316247169354
 				}
 			],
-			"actions": [
-				{
-					"id": "set-position",
-					"objectClass": "startPosition",
-					"sid": 396469023363609,
-					"parameters": {
-						"x": "lerp(startPosition.X, player.X, 0.02)",
-						"y": "lerp(startPosition.Y, player.Y -Yplus, 0.05)"
-					}
-				}
-			],
-			"sid": 552830254427955
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "every-tick",
-					"objectClass": "System",
-					"sid": 262705332860206
-				}
-			],
-			"actions": [],
-			"sid": 130295842964795,
-			"disabled": true
+			"sid": 439129893322232
 		},
 		{
 			"eventType": "group",
@@ -584,28 +682,23 @@
 		{
 			"eventType": "group",
 			"disabled": false,
-			"title": "BG objects",
-			"description": "",
-			"isActiveOnStart": true,
-			"children": [],
-			"sid": 859016813683724
-		},
-		{
-			"eventType": "group",
-			"disabled": false,
-			"title": "Configurations",
+			"title": "cloudSpawn",
 			"description": "",
 			"isActiveOnStart": true,
 			"children": [
+				{
+					"eventType": "comment",
+					"text": "small"
+				},
 				{
 					"eventType": "block",
 					"conditions": [
 						{
 							"id": "every-x-seconds",
 							"objectClass": "System",
-							"sid": 505495389700694,
+							"sid": 373653316343146,
 							"parameters": {
-								"interval-seconds": "random(2,4)"
+								"interval-seconds": "random(6,8)"
 							}
 						}
 					],
@@ -641,14 +734,18 @@
 					"sid": 353339354251026
 				},
 				{
+					"eventType": "comment",
+					"text": "large"
+				},
+				{
 					"eventType": "block",
 					"conditions": [
 						{
 							"id": "every-x-seconds",
 							"objectClass": "System",
-							"sid": 297534909838576,
+							"sid": 109685880338232,
 							"parameters": {
-								"interval-seconds": "random(2,4)"
+								"interval-seconds": "random(8,12)"
 							}
 						}
 					],
@@ -685,72 +782,6 @@
 				}
 			],
 			"sid": 614350468335555
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "cursor-is-over-object",
-					"objectClass": "Mouse",
-					"sid": 142720608668083,
-					"parameters": {
-						"object": "UI"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "tween-two-properties",
-					"objectClass": "UI",
-					"sid": 114639076916546,
-					"disabled": true,
-					"behaviorType": "Tween",
-					"parameters": {
-						"tags": "\"UIAnim\"",
-						"property": "scale",
-						"end-x": "2",
-						"end-y": "2",
-						"time": "1",
-						"ease": "easeoutelastic",
-						"destroy-on-complete": "no",
-						"loop": "no",
-						"ping-pong": "no"
-					}
-				}
-			],
-			"sid": 396202001454146,
-			"disabled": true
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "else",
-					"objectClass": "System",
-					"sid": 844024253376661
-				}
-			],
-			"actions": [
-				{
-					"id": "tween-two-properties",
-					"objectClass": "UI",
-					"sid": 233406118593017,
-					"behaviorType": "Tween",
-					"parameters": {
-						"tags": "\"UIAnim\"",
-						"property": "scale",
-						"end-x": "1",
-						"end-y": "1",
-						"time": "1",
-						"ease": "easeoutelastic",
-						"destroy-on-complete": "no",
-						"loop": "no",
-						"ping-pong": "no"
-					}
-				}
-			],
-			"sid": 604189731291045,
-			"disabled": true
 		},
 		{
 			"eventType": "group",
@@ -853,20 +884,20 @@
 						{
 							"id": "compare-two-values",
 							"objectClass": "System",
-							"sid": 817294878876419,
+							"sid": 887581296692730,
 							"parameters": {
 								"first-value": "(player.Y)-(enemies.Y)",
-								"comparison": 3,
+								"comparison": 5,
 								"second-value": "200"
 							}
 						},
 						{
 							"id": "compare-two-values",
 							"objectClass": "System",
-							"sid": 554656668885240,
+							"sid": 298708886409101,
 							"parameters": {
-								"first-value": "((player.X)-(enemies.X))*enemies.diretionH",
-								"comparison": 4,
+								"first-value": "enemies.diretionH*((player.X)-(enemies.X))",
+								"comparison": 5,
 								"second-value": "0"
 							}
 						},
@@ -874,6 +905,7 @@
 							"id": "is-on-floor",
 							"objectClass": "player",
 							"sid": 196163782248686,
+							"disabled": true,
 							"behaviorType": "Platform"
 						}
 					],
@@ -990,392 +1022,412 @@
 			"sid": 733393450647818
 		},
 		{
-			"eventType": "comment",
-			"text": "HUD"
+			"eventType": "group",
+			"disabled": false,
+			"title": "HUD",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "comment",
+					"text": "HUD"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 501157151878902,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "configuracao"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 125018155521456,
+							"parameters": {
+								"variable": "pressionando"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "tween-two-properties",
+							"objectClass": "configuracao",
+							"sid": 440999415129587,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"\"",
+								"property": "scale",
+								"end-x": "1.2",
+								"end-y": "1.2",
+								"time": "0.5",
+								"ease": "easeoutelastic",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "yes"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 235717590621204,
+							"parameters": {
+								"variable": "pressionando",
+								"value": "true"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 157259140883026,
+							"parameters": {
+								"seconds": "1.0"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Menu_pausar",
+							"sid": 190513491967045,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "sair",
+							"sid": 659013651451269,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "retornar",
+							"sid": 379224648928609,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "pausado",
+							"sid": 242803540230843,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 510481641592011,
+							"parameters": {
+								"variable": "pressionando",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 132989634092436
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 893348396961070,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "retornar"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 657741622822508,
+							"parameters": {
+								"variable": "pressionando"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "tween-two-properties",
+							"objectClass": "retornar",
+							"sid": 150288801557190,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"\"",
+								"property": "scale",
+								"end-x": "1.2",
+								"end-y": "1.2",
+								"time": "0.5",
+								"ease": "easeoutelastic",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "yes"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 479416949793562,
+							"parameters": {
+								"seconds": "1.0"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Menu_pausar",
+							"sid": 824198847426031,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "sair",
+							"sid": 145279699090776,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "retornar",
+							"sid": 995835593393723,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "pausado",
+							"sid": 185728847083925,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 117836285900390,
+							"parameters": {
+								"variable": "pressionando",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 585848600249064
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 822009311164536,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "sair"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 688087603457800,
+							"parameters": {
+								"variable": "pressionando"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "tween-two-properties",
+							"objectClass": "sair",
+							"sid": 578264103273587,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"\"",
+								"property": "scale",
+								"end-x": "1.2",
+								"end-y": "1.2",
+								"time": "0.5",
+								"ease": "easeoutelastic",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "yes"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 855000352141700,
+							"parameters": {
+								"seconds": "1.0"
+							}
+						},
+						{
+							"id": "set-fade-in-time",
+							"objectClass": "Menu_transicao",
+							"sid": 722335917030692,
+							"behaviorType": "Fade",
+							"parameters": {
+								"fade-in-time": "1"
+							}
+						},
+						{
+							"id": "start-fade",
+							"objectClass": "Menu_transicao",
+							"sid": 571483723989284,
+							"behaviorType": "Fade"
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 594464871989089,
+							"parameters": {
+								"seconds": "1.0"
+							}
+						},
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 176976722464696,
+							"parameters": {
+								"layout": "Menu"
+							}
+						}
+					],
+					"sid": 741985503499768
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-timer",
+							"objectClass": "tempo",
+							"sid": 794977815139406,
+							"behaviorType": "Timer",
+							"parameters": {
+								"tag": "\"tempo\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 342779411994340,
+							"parameters": {
+								"variable": "contadordetempo",
+								"value": "1"
+							}
+						},
+						{
+							"id": "start-timer",
+							"objectClass": "tempo",
+							"sid": 553103730494375,
+							"behaviorType": "Timer",
+							"parameters": {
+								"duration": "1.0",
+								"type": "once",
+								"tag": "\"tempo\""
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "tempo",
+							"sid": 644645422539979,
+							"parameters": {
+								"text": "contadordetempo"
+							}
+						}
+					],
+					"sid": 153592763068660
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-text",
+							"objectClass": "tempo",
+							"sid": 935765775931128,
+							"parameters": {
+								"text-to-compare": "\"0\"",
+								"case-sensitivity": "ignore-case"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 695188241236398,
+							"parameters": {
+								"layout": "Menu"
+							}
+						}
+					],
+					"sid": 770115033404107
+				}
+			],
+			"sid": 635600917650397
 		},
 		{
-			"eventType": "block",
-			"conditions": [
+			"eventType": "group",
+			"disabled": false,
+			"title": "Items",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
 				{
-					"id": "on-collision-with-another-object",
-					"objectClass": "player",
-					"sid": 596697872270846,
-					"parameters": {
-						"object": "moeda"
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "player",
+							"sid": 756731710161049,
+							"parameters": {
+								"object": "moeda"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 455790643223283,
+							"parameters": {
+								"variable": "contandoMoedas",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "contadorDeMoedas",
+							"sid": 662648499232983,
+							"parameters": {
+								"text": "contandoMoedas"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "moeda",
+							"sid": 688237934261932
+						}
+					],
+					"sid": 312067456553612
 				}
 			],
-			"actions": [
-				{
-					"id": "add-to-eventvar",
-					"objectClass": "System",
-					"sid": 477892280238450,
-					"parameters": {
-						"variable": "contandoMoedas",
-						"value": "1"
-					}
-				},
-				{
-					"id": "set-text",
-					"objectClass": "contadorDeMoedas",
-					"sid": 715448006160790,
-					"parameters": {
-						"text": "contandoMoedas"
-					}
-				},
-				{
-					"id": "destroy",
-					"objectClass": "moeda",
-					"sid": 447282746651692
-				}
-			],
-			"sid": 807885824978078
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-object-clicked",
-					"objectClass": "Mouse",
-					"sid": 499628341455455,
-					"parameters": {
-						"mouse-button": "left",
-						"click-type": "clicked",
-						"object-clicked": "configuracao"
-					}
-				},
-				{
-					"id": "compare-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 670128625293644,
-					"parameters": {
-						"variable": "pressionando"
-					},
-					"isInverted": true
-				}
-			],
-			"actions": [
-				{
-					"id": "tween-two-properties",
-					"objectClass": "configuracao",
-					"sid": 154531212589955,
-					"behaviorType": "Tween",
-					"parameters": {
-						"tags": "\"\"",
-						"property": "scale",
-						"end-x": "1.2",
-						"end-y": "1.2",
-						"time": "0.5",
-						"ease": "easeoutelastic",
-						"destroy-on-complete": "no",
-						"loop": "no",
-						"ping-pong": "yes"
-					}
-				},
-				{
-					"id": "set-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 648397884903511,
-					"parameters": {
-						"variable": "pressionando",
-						"value": "true"
-					}
-				},
-				{
-					"id": "wait",
-					"objectClass": "System",
-					"sid": 607710251897036,
-					"parameters": {
-						"seconds": "1.0"
-					}
-				},
-				{
-					"id": "set-visible",
-					"objectClass": "Menu_pausar",
-					"sid": 146025440502844,
-					"parameters": {
-						"visibility": "visible"
-					}
-				},
-				{
-					"id": "set-visible",
-					"objectClass": "sair",
-					"sid": 210742277249986,
-					"parameters": {
-						"visibility": "visible"
-					}
-				},
-				{
-					"id": "set-visible",
-					"objectClass": "retornar",
-					"sid": 471421748343265,
-					"parameters": {
-						"visibility": "visible"
-					}
-				},
-				{
-					"id": "set-visible",
-					"objectClass": "pausado",
-					"sid": 933831248895145,
-					"parameters": {
-						"visibility": "visible"
-					}
-				},
-				{
-					"id": "set-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 114151936277554,
-					"parameters": {
-						"variable": "pressionando",
-						"value": "true"
-					}
-				}
-			],
-			"sid": 316021748582511
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-object-clicked",
-					"objectClass": "Mouse",
-					"sid": 928929490168834,
-					"parameters": {
-						"mouse-button": "left",
-						"click-type": "clicked",
-						"object-clicked": "retornar"
-					}
-				},
-				{
-					"id": "compare-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 675977181845727,
-					"parameters": {
-						"variable": "pressionando"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "tween-two-properties",
-					"objectClass": "retornar",
-					"sid": 869428683243405,
-					"behaviorType": "Tween",
-					"parameters": {
-						"tags": "\"\"",
-						"property": "scale",
-						"end-x": "1.2",
-						"end-y": "1.2",
-						"time": "0.5",
-						"ease": "easeoutelastic",
-						"destroy-on-complete": "no",
-						"loop": "no",
-						"ping-pong": "yes"
-					}
-				},
-				{
-					"id": "wait",
-					"objectClass": "System",
-					"sid": 315510557526897,
-					"parameters": {
-						"seconds": "1.0"
-					}
-				},
-				{
-					"id": "set-visible",
-					"objectClass": "Menu_pausar",
-					"sid": 455849614601004,
-					"parameters": {
-						"visibility": "invisible"
-					}
-				},
-				{
-					"id": "set-visible",
-					"objectClass": "sair",
-					"sid": 365330031224264,
-					"parameters": {
-						"visibility": "invisible"
-					}
-				},
-				{
-					"id": "set-visible",
-					"objectClass": "retornar",
-					"sid": 619829691554066,
-					"parameters": {
-						"visibility": "invisible"
-					}
-				},
-				{
-					"id": "set-visible",
-					"objectClass": "pausado",
-					"sid": 256937516355859,
-					"parameters": {
-						"visibility": "invisible"
-					}
-				},
-				{
-					"id": "set-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 712232118822381,
-					"parameters": {
-						"variable": "pressionando",
-						"value": "false"
-					}
-				}
-			],
-			"sid": 784323793987952
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-object-clicked",
-					"objectClass": "Mouse",
-					"sid": 258082892541305,
-					"parameters": {
-						"mouse-button": "left",
-						"click-type": "clicked",
-						"object-clicked": "sair"
-					}
-				},
-				{
-					"id": "compare-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 899751123565844,
-					"parameters": {
-						"variable": "pressionando"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "tween-two-properties",
-					"objectClass": "sair",
-					"sid": 958019241631465,
-					"behaviorType": "Tween",
-					"parameters": {
-						"tags": "\"\"",
-						"property": "scale",
-						"end-x": "1.2",
-						"end-y": "1.2",
-						"time": "0.5",
-						"ease": "easeoutelastic",
-						"destroy-on-complete": "no",
-						"loop": "no",
-						"ping-pong": "yes"
-					}
-				},
-				{
-					"id": "wait",
-					"objectClass": "System",
-					"sid": 172109048240150,
-					"parameters": {
-						"seconds": "1.0"
-					}
-				},
-				{
-					"id": "set-fade-in-time",
-					"objectClass": "Menu_transicao",
-					"sid": 826744905032303,
-					"behaviorType": "Fade",
-					"parameters": {
-						"fade-in-time": "1"
-					}
-				},
-				{
-					"id": "start-fade",
-					"objectClass": "Menu_transicao",
-					"sid": 643149627338347,
-					"behaviorType": "Fade"
-				},
-				{
-					"id": "wait",
-					"objectClass": "System",
-					"sid": 975459796641756,
-					"parameters": {
-						"seconds": "1.0"
-					}
-				},
-				{
-					"id": "go-to-layout",
-					"objectClass": "System",
-					"sid": 365174646078139,
-					"parameters": {
-						"layout": "Menu"
-					}
-				}
-			],
-			"sid": 893837801504591
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-timer",
-					"objectClass": "tempo",
-					"sid": 345286162242652,
-					"behaviorType": "Timer",
-					"parameters": {
-						"tag": "\"tempo\""
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "subtract-from-eventvar",
-					"objectClass": "System",
-					"sid": 505638749039960,
-					"parameters": {
-						"variable": "contadordetempo",
-						"value": "1"
-					}
-				},
-				{
-					"id": "start-timer",
-					"objectClass": "tempo",
-					"sid": 646394683755061,
-					"behaviorType": "Timer",
-					"parameters": {
-						"duration": "1.0",
-						"type": "once",
-						"tag": "\"tempo\""
-					}
-				},
-				{
-					"id": "set-text",
-					"objectClass": "tempo",
-					"sid": 133828176806844,
-					"parameters": {
-						"text": "contadordetempo"
-					}
-				}
-			],
-			"sid": 332377529752048
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "compare-text",
-					"objectClass": "tempo",
-					"sid": 479316617889534,
-					"parameters": {
-						"text-to-compare": "\"0\"",
-						"case-sensitivity": "ignore-case"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "go-to-layout",
-					"objectClass": "System",
-					"sid": 954731656448953,
-					"parameters": {
-						"layout": "Menu"
-					}
-				}
-			],
-			"sid": 801417750564780
+			"sid": 406486674961154
 		}
 	],
 	"sid": 916221189026207

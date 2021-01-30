@@ -9,6 +9,21 @@
 			"behaviorId": "solid",
 			"name": "Solid",
 			"sid": 515330782688650
+		},
+		{
+			"behaviorId": "Pin",
+			"name": "Pin",
+			"sid": 190409476242206
+		},
+		{
+			"behaviorId": "Sin",
+			"name": "Sine",
+			"sid": 580141415045579
+		},
+		{
+			"behaviorId": "Sin",
+			"name": "Sine2",
+			"sid": 341475940602126
 		}
 	],
 	"effectTypes": [],
@@ -24,7 +39,7 @@
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 4702536,
+						"imageSpriteId": 6898303,
 						"useCollisionPoly": true,
 						"duration": 1
 					}

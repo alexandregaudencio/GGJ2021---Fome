@@ -1,0 +1,17 @@
+{
+	"name": "items",
+	"plugin-id": "Sprite",
+	"sid": 618707035193951,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Pin",
+			"name": "Pin",
+			"sid": 602371774554320
+		}
+	],
+	"effectTypes": [],
+	"members": [
+		"moeda"
+	]
+}
