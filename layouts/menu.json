@@ -522,6 +522,48 @@
 						"angle": 0,
 						"zElevation": 0
 					}
+				},
+				{
+					"type": "Textodecrditos",
+					"properties": {
+						"text": "Pressione Esc para pular",
+						"enable-bbcode": true,
+						"font": "PirataOne-Regular",
+						"size": 30,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"initially-visible": false,
+						"origin": "center"
+					},
+					"uid": 69,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 206.5,
+						"y": 58,
+						"width": 353,
+						"height": 55,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
 				}
 			],
 			"sid": 406757081455896,

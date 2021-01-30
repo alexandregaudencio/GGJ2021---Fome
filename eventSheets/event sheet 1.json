@@ -62,6 +62,26 @@
 			"sid": 411576617746968
 		},
 		{
+			"eventType": "variable",
+			"name": "pausar",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 612946243402094
+		},
+		{
+			"eventType": "variable",
+			"name": "vida",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 108290408388665
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "StartConfig",
@@ -294,6 +314,24 @@
 							"parameters": {
 								"animation": "\"inicial\"",
 								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 844841754520774,
+							"parameters": {
+								"variable": "pausar",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 438005358207170,
+							"parameters": {
+								"variable": "vida",
+								"value": "3"
 							}
 						}
 					],
@@ -1148,6 +1186,15 @@
 								"variable": "pressionando",
 								"value": "true"
 							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 556343679272689,
+							"parameters": {
+								"variable": "pausar",
+								"value": "true"
+							}
 						}
 					],
 					"sid": 132989634092436
@@ -1168,13 +1215,22 @@
 						{
 							"id": "compare-boolean-eventvar",
 							"objectClass": "System",
-							"sid": 657741622822508,
+							"sid": 320696044167461,
 							"parameters": {
 								"variable": "pressionando"
 							}
 						}
 					],
 					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 138394697447411,
+							"parameters": {
+								"variable": "pausar",
+								"value": "false"
+							}
+						},
 						{
 							"id": "tween-two-properties",
 							"objectClass": "retornar",
@@ -1250,7 +1306,7 @@
 						{
 							"id": "on-object-clicked",
 							"objectClass": "Mouse",
-							"sid": 822009311164536,
+							"sid": 518045967033239,
 							"parameters": {
 								"mouse-button": "left",
 								"click-type": "clicked",
@@ -1260,17 +1316,26 @@
 						{
 							"id": "compare-boolean-eventvar",
 							"objectClass": "System",
-							"sid": 688087603457800,
+							"sid": 444155562871668,
 							"parameters": {
-								"variable": "pressionando"
+								"variable": "pausar"
 							}
 						}
 					],
 					"actions": [
 						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 377480477871949,
+							"parameters": {
+								"variable": "pausar",
+								"value": "false"
+							}
+						},
+						{
 							"id": "tween-two-properties",
 							"objectClass": "sair",
-							"sid": 578264103273587,
+							"sid": 676187218809475,
 							"behaviorType": "Tween",
 							"parameters": {
 								"tags": "\"\"",
@@ -1287,17 +1352,25 @@
 						{
 							"id": "wait",
 							"objectClass": "System",
-							"sid": 855000352141700,
+							"sid": 908675459264448,
 							"parameters": {
 								"seconds": "1.0"
 							}
 						},
 						{
 							"callFunction": "transicao",
-							"sid": 809408076569502
+							"sid": 962895380383019
 						}
 					],
-					"sid": 741985503499768
+					"sid": 166397717636895,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [],
+							"sid": 417206823032069
+						}
+					]
 				},
 				{
 					"eventType": "block",
@@ -1394,186 +1467,189 @@
 					"sid": 770115033404107
 				},
 				{
+					"eventType": "comment",
+					"text": "PAUSE"
+				},
+				{
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "on-collision-with-another-object",
-							"objectClass": "player",
-							"sid": 320553401207701,
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 435420545269248,
 							"parameters": {
-								"object": "enemy1"
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "sair"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 463162967995369,
+							"parameters": {
+								"variable": "pressionando"
 							}
 						}
 					],
-					"actions": [],
-					"sid": 134373211879001,
-					"children": [
+					"actions": [
 						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-instance-variable",
-									"objectClass": "vida",
-									"sid": 902906450849625,
-									"parameters": {
-										"instance-variable": "animacao",
-										"comparison": 0,
-										"value": "0"
-									}
-								},
-								{
-									"id": "is-animation-playing",
-									"objectClass": "vida",
-									"sid": 828549102839475,
-									"parameters": {
-										"animation": "\"um\""
-									},
-									"isInverted": true
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation",
-									"objectClass": "vida",
-									"sid": 390272033087538,
-									"parameters": {
-										"animation": "\"um\"",
-										"from": "beginning"
-									}
-								},
-								{
-									"id": "wait",
-									"objectClass": "System",
-									"sid": 421229310969310,
-									"parameters": {
-										"seconds": "1.0"
-									}
-								},
-								{
-									"id": "set-instvar-value",
-									"objectClass": "vida",
-									"sid": 195404319842461,
-									"parameters": {
-										"instance-variable": "animacao",
-										"value": "1"
-									}
-								}
-							],
-							"sid": 344175720722725
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 731990535461613,
+							"parameters": {
+								"variable": "pausar",
+								"value": "false"
+							}
 						},
 						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-instance-variable",
-									"objectClass": "vida",
-									"sid": 161685164231081,
-									"parameters": {
-										"instance-variable": "animacao",
-										"comparison": 0,
-										"value": "1"
-									}
-								},
-								{
-									"id": "is-animation-playing",
-									"objectClass": "vida",
-									"sid": 681351483187516,
-									"parameters": {
-										"animation": "\"dois\""
-									},
-									"isInverted": true
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation",
-									"objectClass": "vida",
-									"sid": 962668940586365,
-									"parameters": {
-										"animation": "\"dois\"",
-										"from": "beginning"
-									}
-								},
-								{
-									"id": "wait",
-									"objectClass": "System",
-									"sid": 957661651555982,
-									"parameters": {
-										"seconds": "1.0"
-									}
-								},
-								{
-									"id": "set-instvar-value",
-									"objectClass": "vida",
-									"sid": 435055105726462,
-									"parameters": {
-										"instance-variable": "animacao",
-										"value": "2"
-									}
-								}
-							],
-							"sid": 412275247088588
+							"id": "tween-two-properties",
+							"objectClass": "sair",
+							"sid": 787632390455157,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"\"",
+								"property": "scale",
+								"end-x": "1.2",
+								"end-y": "1.2",
+								"time": "0.5",
+								"ease": "easeoutelastic",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "yes"
+							}
 						},
 						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-instance-variable",
-									"objectClass": "vida",
-									"sid": 461546429080766,
-									"parameters": {
-										"instance-variable": "animacao",
-										"comparison": 0,
-										"value": "2"
-									}
-								},
-								{
-									"id": "is-animation-playing",
-									"objectClass": "vida",
-									"sid": 270798725977937,
-									"parameters": {
-										"animation": "\"tres\""
-									},
-									"isInverted": true
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation",
-									"objectClass": "vida",
-									"sid": 444243290354798,
-									"parameters": {
-										"animation": "\"tres\"",
-										"from": "beginning"
-									}
-								},
-								{
-									"id": "wait",
-									"objectClass": "System",
-									"sid": 297671077911966,
-									"parameters": {
-										"seconds": "1.0"
-									}
-								},
-								{
-									"id": "set-instvar-value",
-									"objectClass": "vida",
-									"sid": 252219110139130,
-									"parameters": {
-										"instance-variable": "animacao",
-										"value": "3"
-									}
-								}
-							],
-							"sid": 271414438417582
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 835332334438963,
+							"parameters": {
+								"seconds": "1.0"
+							}
 						},
 						{
-							"eventType": "block",
-							"conditions": [],
-							"actions": [],
-							"sid": 952251976149515
+							"callFunction": "transicao",
+							"sid": 333946932656042
 						}
-					]
+					],
+					"sid": 719945573170073
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 722895724887584,
+							"parameters": {
+								"variable": "pausar"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-time-scale",
+							"objectClass": "System",
+							"sid": 717631752075525,
+							"parameters": {
+								"time-scale": "0"
+							}
+						}
+					],
+					"sid": 388081368835107
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 321755928874091
+						}
+					],
+					"actions": [
+						{
+							"id": "set-time-scale",
+							"objectClass": "System",
+							"sid": 772161715200937,
+							"parameters": {
+								"time-scale": "1.0"
+							}
+						}
+					],
+					"sid": 773659158185649
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 423938238500733,
+							"parameters": {
+								"variable": "vida",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "pausado",
+							"sid": 243129212690105,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Menu_pausar",
+							"sid": 150838225250628,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "sair",
+							"sid": 922879986985725,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "pausado",
+							"sid": 228043995758386,
+							"parameters": {
+								"text": "\"Game Over\""
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 399766670699974,
+							"parameters": {
+								"variable": "vida",
+								"value": "-1"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 807457245293290,
+							"parameters": {
+								"variable": "pausar",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 410580070845230
+				},
+				{
+					"eventType": "comment",
+					"text": "FUNÇÃO"
 				},
 				{
 					"functionName": "transicao",
@@ -1690,6 +1766,209 @@
 						}
 					],
 					"sid": 312067456553612
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "player",
+							"sid": 659207046874154,
+							"parameters": {
+								"object": "enemy1"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 477495264713230,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "vida",
+									"sid": 480523848621294,
+									"parameters": {
+										"instance-variable": "animacao",
+										"comparison": 0,
+										"value": "0"
+									}
+								},
+								{
+									"id": "is-animation-playing",
+									"objectClass": "vida",
+									"sid": 851202937896338,
+									"parameters": {
+										"animation": "\"um\""
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "vida",
+									"sid": 543840152836499,
+									"parameters": {
+										"animation": "\"um\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 778616859136172,
+									"parameters": {
+										"seconds": "1.0"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "vida",
+									"sid": 968384379370391,
+									"parameters": {
+										"instance-variable": "animacao",
+										"value": "1"
+									}
+								},
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 863625327479565,
+									"parameters": {
+										"variable": "vida",
+										"value": "-1"
+									}
+								}
+							],
+							"sid": 358091153141763
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "vida",
+									"sid": 638245864621804,
+									"parameters": {
+										"instance-variable": "animacao",
+										"comparison": 0,
+										"value": "1"
+									}
+								},
+								{
+									"id": "is-animation-playing",
+									"objectClass": "vida",
+									"sid": 611237459809335,
+									"parameters": {
+										"animation": "\"dois\""
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "vida",
+									"sid": 995910681948525,
+									"parameters": {
+										"animation": "\"dois\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 104922088073199,
+									"parameters": {
+										"seconds": "1.0"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "vida",
+									"sid": 991576502489184,
+									"parameters": {
+										"instance-variable": "animacao",
+										"value": "2"
+									}
+								},
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 567916810276421,
+									"parameters": {
+										"variable": "vida",
+										"value": "-1"
+									}
+								}
+							],
+							"sid": 257960099474612
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "vida",
+									"sid": 859925618973262,
+									"parameters": {
+										"instance-variable": "animacao",
+										"comparison": 0,
+										"value": "2"
+									}
+								},
+								{
+									"id": "is-animation-playing",
+									"objectClass": "vida",
+									"sid": 924302657348490,
+									"parameters": {
+										"animation": "\"tres\""
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "vida",
+									"sid": 685981065969590,
+									"parameters": {
+										"animation": "\"tres\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 916857732459116,
+									"parameters": {
+										"seconds": "1.0"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "vida",
+									"sid": 336800885297292,
+									"parameters": {
+										"instance-variable": "animacao",
+										"value": "3"
+									}
+								},
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 615440883668817,
+									"parameters": {
+										"variable": "vida",
+										"value": "-1"
+									}
+								}
+							],
+							"sid": 684316184613033
+						}
+					]
 				}
 			],
 			"sid": 406486674961154

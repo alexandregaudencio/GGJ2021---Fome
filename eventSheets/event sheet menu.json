@@ -22,6 +22,16 @@
 			"sid": 677849426002448
 		},
 		{
+			"eventType": "variable",
+			"name": "botaoPressionado",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 798793479308472
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -106,6 +116,15 @@
 					"sid": 317945763262157,
 					"parameters": {
 						"variable": "barcoandando",
+						"value": "false"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 186464316856237,
+					"parameters": {
+						"variable": "botaoPressionado",
 						"value": "false"
 					}
 				},
@@ -316,9 +335,27 @@
 						"click-type": "clicked",
 						"object-clicked": "Menu_botaoIniciar"
 					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 805615676462125,
+					"parameters": {
+						"variable": "botaoPressionado"
+					},
+					"isInverted": true
 				}
 			],
 			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 435388158167611,
+					"parameters": {
+						"variable": "botaoPressionado",
+						"value": "true"
+					}
+				},
 				{
 					"id": "tween-two-properties",
 					"objectClass": "Menu_botaoIniciar",
@@ -369,6 +406,14 @@
 						"variable": "barcoandando",
 						"value": "true"
 					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Textodecrditos",
+					"sid": 161251345122563,
+					"parameters": {
+						"visibility": "visible"
+					}
 				}
 			],
 			"sid": 190389707361178
@@ -385,9 +430,27 @@
 						"click-type": "clicked",
 						"object-clicked": "Menu_botaocreditos"
 					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 517193585390331,
+					"parameters": {
+						"variable": "botaoPressionado"
+					},
+					"isInverted": true
 				}
 			],
 			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 732044628084440,
+					"parameters": {
+						"variable": "botaoPressionado",
+						"value": "true"
+					}
+				},
 				{
 					"id": "tween-two-properties",
 					"objectClass": "Menu_botaocreditos",
@@ -449,9 +512,27 @@
 						"click-type": "clicked",
 						"object-clicked": "Menu_botaotutorial"
 					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 364668588874526,
+					"parameters": {
+						"variable": "botaoPressionado"
+					},
+					"isInverted": true
 				}
 			],
 			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 296615370812085,
+					"parameters": {
+						"variable": "botaoPressionado",
+						"value": "true"
+					}
+				},
 				{
 					"id": "tween-two-properties",
 					"objectClass": "Menu_botaotutorial",
@@ -513,9 +594,27 @@
 						"click-type": "clicked",
 						"object-clicked": "Menu_botaosair"
 					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 395728495435138,
+					"parameters": {
+						"variable": "botaoPressionado"
+					},
+					"isInverted": true
 				}
 			],
 			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 415538604634716,
+					"parameters": {
+						"variable": "botaoPressionado",
+						"value": "true"
+					}
+				},
 				{
 					"id": "tween-two-properties",
 					"objectClass": "Menu_botaosair",
@@ -568,6 +667,31 @@
 				}
 			],
 			"sid": 879630008381267
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 450207517422594,
+					"parameters": {
+						"key": 27
+					}
+				},
+				{
+					"id": "is-visible",
+					"objectClass": "Textodecrditos",
+					"sid": 164530726542378
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "transicaoMenueJogo",
+					"sid": 104246352991990
+				}
+			],
+			"sid": 669336346621933
 		},
 		{
 			"functionName": "transicaoMenueJogo",
@@ -705,7 +829,7 @@
 			"eventType": "block",
 			"conditions": [],
 			"actions": [],
-			"sid": 851754003574857
+			"sid": 713365340150257
 		}
 	],
 	"sid": 859898327137018

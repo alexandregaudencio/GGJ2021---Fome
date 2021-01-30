@@ -25,9 +25,27 @@
 						"click-type": "clicked",
 						"object-clicked": "Menu_botaotutorial"
 					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 994705322669606,
+					"parameters": {
+						"variable": "botaoPressionado"
+					},
+					"isInverted": true
 				}
 			],
 			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 715403839665740,
+					"parameters": {
+						"variable": "botaoPressionado",
+						"value": "true"
+					}
+				},
 				{
 					"id": "tween-two-properties",
 					"objectClass": "Menu_botaotutorial",

@@ -74,6 +74,15 @@
 						"variable": "creditos",
 						"value": "false"
 					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 126568408033549,
+					"parameters": {
+						"variable": "botaoPressionado",
+						"value": "false"
+					}
 				}
 			],
 			"sid": 357639654339031
@@ -90,9 +99,27 @@
 						"click-type": "clicked",
 						"object-clicked": "Menu_botaocreditos"
 					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 450616213827683,
+					"parameters": {
+						"variable": "botaoPressionado"
+					},
+					"isInverted": true
 				}
 			],
 			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 965567843561027,
+					"parameters": {
+						"variable": "botaoPressionado",
+						"value": "true"
+					}
+				},
 				{
 					"id": "tween-two-properties",
 					"objectClass": "Menu_botaocreditos",
