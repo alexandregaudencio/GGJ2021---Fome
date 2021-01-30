@@ -275,10 +275,10 @@
 						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
-							"sid": 602223221488654,
+							"sid": 392749262592629,
 							"parameters": {
 								"variable": "contadordetempo",
-								"value": "600"
+								"value": "60"
 							}
 						},
 						{
