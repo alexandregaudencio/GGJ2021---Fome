@@ -1,0 +1,57 @@
+{
+	"name": "madeiraDetalhe",
+	"plugin-id": "Sprite",
+	"sid": 296175341442458,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 760,
+						"height": 339,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 677935,
+						"collisionPoly": {
+							"points": [
+								0,
+								0,
+								0.5,
+								0,
+								0.7684210526315789,
+								0.5162241887905604,
+								0.7460526315789474,
+								0.5,
+								0.9973684210526316,
+								0.9941002949852508,
+								0.5,
+								0.9941002949852508,
+								0.0013157894736842105,
+								0.9941002949852508,
+								0,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 368102584980992,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

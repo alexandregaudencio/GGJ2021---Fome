@@ -1,0 +1,57 @@
+{
+	"name": "setaTutorial",
+	"plugin-id": "Sprite",
+	"sid": 617514805822377,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 413,
+						"height": 262,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4861334,
+						"collisionPoly": {
+							"points": [
+								0.15012106537530268,
+								0.2366412213740458,
+								0.5,
+								0.04580152671755725,
+								0.7990314769975787,
+								0.31297709923664124,
+								0.9878934624697336,
+								0.5,
+								0.7966101694915254,
+								0.6793893129770993,
+								0.5,
+								0.9541984732824428,
+								0.15012106537530268,
+								0.7595419847328244,
+								0,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 876807535292464,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

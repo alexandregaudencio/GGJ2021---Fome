@@ -2,24 +2,327 @@
 	"name": "Event sheet menu",
 	"events": [
 		{
+			"eventType": "variable",
+			"name": "sumindo",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 972807072699178
+		},
+		{
+			"eventType": "variable",
+			"name": "barcoandando",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 677849426002448
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 761473652560098
+				}
+			],
+			"actions": [
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "Menu_jogar",
+					"sid": 423031718874664,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "Menu_botaoIniciar",
+						"x": true,
+						"y": true,
+						"angle": false,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "Menu_botaocreditos",
+					"sid": 357113235243239,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "Menu_botaoIniciar",
+						"x": true,
+						"y": true,
+						"angle": false,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "Menu_botaosair",
+					"sid": 846748298203809,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "Menu_botaoIniciar",
+						"x": true,
+						"y": true,
+						"angle": false,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "Menu_botaotutorial",
+					"sid": 781305333126481,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "Menu_botaoIniciar",
+						"x": true,
+						"y": true,
+						"angle": false,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 901488269793196,
+					"parameters": {
+						"variable": "sumindo",
+						"value": "false"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 317945763262157,
+					"parameters": {
+						"variable": "barcoandando",
+						"value": "false"
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "Particles",
+					"sid": 868112803870069,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "Menu_barco",
+						"x": true,
+						"y": true,
+						"angle": false,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				}
+			],
+			"sid": 589387833044080
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 238834399786589
+				}
+			],
+			"actions": [],
+			"sid": 682107290755463,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-y",
+							"objectClass": "Menu_botaoIniciar",
+							"sid": 369317843444452,
+							"parameters": {
+								"comparison": 3,
+								"y-co-ordinate": "1000"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 290542931099771,
+							"parameters": {
+								"variable": "sumindo"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position",
+							"objectClass": "Menu_botaoIniciar",
+							"sid": 298528283449713,
+							"parameters": {
+								"x": "Menu_botaoIniciar.X",
+								"y": "Menu_botaoIniciar.Y + (100 * dt)"
+							}
+						}
+					],
+					"sid": 272580547777515
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-y",
+							"objectClass": "Menu_botaoIniciar",
+							"sid": 560645049960206,
+							"parameters": {
+								"comparison": 5,
+								"y-co-ordinate": "378"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 469017475745450,
+							"parameters": {
+								"variable": "sumindo"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position",
+							"objectClass": "Menu_botaoIniciar",
+							"sid": 641974312663071,
+							"parameters": {
+								"x": "Menu_botaoIniciar.X",
+								"y": "Menu_botaoIniciar.Y - (100 * dt)"
+							}
+						}
+					],
+					"sid": 813075364563572
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-y",
+							"objectClass": "Menu_logo",
+							"sid": 438652423116649,
+							"parameters": {
+								"comparison": 5,
+								"y-co-ordinate": "-150"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 960589228015775,
+							"parameters": {
+								"variable": "sumindo"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position",
+							"objectClass": "Menu_logo",
+							"sid": 873901792051836,
+							"parameters": {
+								"x": "Menu_logo.X ",
+								"y": "Menu_logo.Y  - (100 * dt)"
+							}
+						}
+					],
+					"sid": 848038755724366
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-y",
+							"objectClass": "Menu_logo",
+							"sid": 317768017275471,
+							"parameters": {
+								"comparison": 3,
+								"y-co-ordinate": "157"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 981235154119232,
+							"parameters": {
+								"variable": "sumindo"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position",
+							"objectClass": "Menu_logo",
+							"sid": 400519616482589,
+							"parameters": {
+								"x": "Menu_logo.X ",
+								"y": "Menu_logo.Y  + (100 * dt)"
+							}
+						}
+					],
+					"sid": 814257498372298
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 686083257262965,
+							"parameters": {
+								"variable": "barcoandando"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position",
+							"objectClass": "Menu_barco",
+							"sid": 840029793311182,
+							"parameters": {
+								"x": "Menu_barco.X + (100*dt)",
+								"y": "Menu_barco.Y"
+							}
+						}
+					],
+					"sid": 685689050225278
+				}
+			]
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
 					"id": "on-object-clicked",
 					"objectClass": "Mouse",
-					"sid": 316232820612077,
+					"sid": 557654643911692,
 					"parameters": {
 						"mouse-button": "left",
 						"click-type": "clicked",
-						"object-clicked": "Menu_botao"
+						"object-clicked": "Menu_botaoIniciar"
 					}
 				}
 			],
 			"actions": [
 				{
 					"id": "tween-two-properties",
-					"objectClass": "Menu_botao",
-					"sid": 489641241220807,
+					"objectClass": "Menu_botaoIniciar",
+					"sid": 360109330785929,
 					"behaviorType": "Tween",
 					"parameters": {
 						"tags": "\"\"",
@@ -36,15 +339,250 @@
 				{
 					"id": "wait",
 					"objectClass": "System",
-					"sid": 136987897880086,
+					"sid": 576018395928844,
 					"parameters": {
 						"seconds": "1.0"
 					}
 				},
 				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 245436421638167,
+					"parameters": {
+						"variable": "sumindo",
+						"value": "true"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 284839761409022,
+					"parameters": {
+						"seconds": "3.0"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 656020764887996,
+					"parameters": {
+						"variable": "barcoandando",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 190389707361178
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 704128116482027,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "Menu_botaocreditos"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "tween-two-properties",
+					"objectClass": "Menu_botaocreditos",
+					"sid": 397538149369050,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "scale",
+						"end-x": "1.2",
+						"end-y": "1.2",
+						"time": "0.5",
+						"ease": "easeoutelastic",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "yes"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 894364125869700,
+					"parameters": {
+						"seconds": "1.0"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 489758869697570,
+					"parameters": {
+						"variable": "sumindo",
+						"value": "true"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 415990470485808,
+					"parameters": {
+						"seconds": "3.0"
+					}
+				},
+				{
+					"callFunction": "transicaoMenueCreditos",
+					"sid": 977622677260174
+				}
+			],
+			"sid": 883270949160135
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 898281178923859,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "Menu_botaotutorial"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "tween-two-properties",
+					"objectClass": "Menu_botaotutorial",
+					"sid": 908953335276491,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "scale",
+						"end-x": "1.2",
+						"end-y": "1.2",
+						"time": "0.5",
+						"ease": "easeoutelastic",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "yes"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 605552408506367,
+					"parameters": {
+						"seconds": "1.0"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 431433267682424,
+					"parameters": {
+						"variable": "sumindo",
+						"value": "true"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 411970200342030,
+					"parameters": {
+						"seconds": "3.0"
+					}
+				},
+				{
+					"callFunction": "transicaoMenueTutorial",
+					"sid": 520564341049611
+				}
+			],
+			"sid": 524591902991820
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 890531832331067,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "Menu_botaosair"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "tween-two-properties",
+					"objectClass": "Menu_botaosair",
+					"sid": 178581975561196,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "scale",
+						"end-x": "1.2",
+						"end-y": "1.2",
+						"time": "0.5",
+						"ease": "easeoutelastic",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "yes"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 136111800929788,
+					"parameters": {
+						"seconds": "1.0"
+					}
+				},
+				{
+					"id": "close",
+					"objectClass": "Browser",
+					"sid": 716978715923846
+				}
+			],
+			"sid": 285523298744075
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Menu_barco",
+					"sid": 285565312899676,
+					"parameters": {
+						"object": "Menu_colisor"
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "transicaoMenueJogo",
+					"sid": 796640994266849
+				}
+			],
+			"sid": 879630008381267
+		},
+		{
+			"functionName": "transicaoMenueJogo",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
 					"id": "set-fade-in-time",
 					"objectClass": "Menu_transicao",
-					"sid": 267238056060663,
+					"sid": 272265832541822,
 					"behaviorType": "Fade",
 					"parameters": {
 						"fade-in-time": "1"
@@ -53,13 +591,13 @@
 				{
 					"id": "start-fade",
 					"objectClass": "Menu_transicao",
-					"sid": 965084518716653,
+					"sid": 959978844752290,
 					"behaviorType": "Fade"
 				},
 				{
 					"id": "wait",
 					"objectClass": "System",
-					"sid": 942238916585569,
+					"sid": 895341693424614,
 					"parameters": {
 						"seconds": "1.0"
 					}
@@ -67,13 +605,107 @@
 				{
 					"id": "go-to-layout",
 					"objectClass": "System",
-					"sid": 253060596232451,
+					"sid": 876840093037795,
 					"parameters": {
 						"layout": "Layout 1"
 					}
 				}
 			],
-			"sid": 612111110866425
+			"sid": 305090985013331
+		},
+		{
+			"functionName": "transicaoMenueTutorial",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-fade-in-time",
+					"objectClass": "Menu_transicao",
+					"sid": 145872929117205,
+					"behaviorType": "Fade",
+					"parameters": {
+						"fade-in-time": "1"
+					}
+				},
+				{
+					"id": "start-fade",
+					"objectClass": "Menu_transicao",
+					"sid": 936706943698136,
+					"behaviorType": "Fade"
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 351508523005334,
+					"parameters": {
+						"seconds": "1.0"
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 677090547833118,
+					"parameters": {
+						"layout": "Tutorial"
+					}
+				}
+			],
+			"sid": 822545253299565
+		},
+		{
+			"functionName": "transicaoMenueCreditos",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-fade-in-time",
+					"objectClass": "Menu_transicao",
+					"sid": 178642854920574,
+					"behaviorType": "Fade",
+					"parameters": {
+						"fade-in-time": "1"
+					}
+				},
+				{
+					"id": "start-fade",
+					"objectClass": "Menu_transicao",
+					"sid": 530633330839160,
+					"behaviorType": "Fade"
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 147295325233963,
+					"parameters": {
+						"seconds": "1.0"
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 689584818560806,
+					"parameters": {
+						"layout": "Creditos"
+					}
+				}
+			],
+			"sid": 725529830991745
+		},
+		{
+			"eventType": "block",
+			"conditions": [],
+			"actions": [],
+			"sid": 851754003574857
 		}
 	],
 	"sid": 859898327137018

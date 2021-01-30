@@ -1,0 +1,37 @@
+{
+	"name": "Menu_barco",
+	"plugin-id": "Sprite",
+	"sid": 494062911883304,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 758,
+						"height": 322,
+						"originX": 0.07519788918205805,
+						"originY": 0.2701863354037267,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1200441,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 228041957272340,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

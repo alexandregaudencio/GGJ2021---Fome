@@ -48,8 +48,24 @@
 		},
 		{
 			"type": "plugin",
+			"id": "Browser",
+			"name": "Browser",
+			"author": "Scirra",
+			"version": "r225",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Text",
 			"name": "Text",
+			"author": "Scirra",
+			"version": "r225",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Particles",
+			"name": "Particles",
 			"author": "Scirra",
 			"version": "r225",
 			"bundled": false
@@ -88,6 +104,14 @@
 		},
 		{
 			"type": "behavior",
+			"id": "Pin",
+			"name": "Pin",
+			"author": "Scirra",
+			"version": "r225",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "Fade",
 			"name": "Fade",
 			"author": "Scirra",
@@ -114,14 +138,6 @@
 			"type": "behavior",
 			"id": "Sin",
 			"name": "Sine",
-			"author": "Scirra",
-			"version": "r225",
-			"bundled": false
-		},
-		{
-			"type": "behavior",
-			"id": "Pin",
-			"name": "Pin",
 			"author": "Scirra",
 			"version": "r225",
 			"bundled": false
@@ -180,7 +196,8 @@
 			{
 				"items": [
 					"Keyboard",
-					"Mouse"
+					"Mouse",
+					"Browser"
 				],
 				"subfolders": [],
 				"name": "config"
@@ -194,9 +211,18 @@
 			},
 			{
 				"items": [
-					"Menu_botao",
+					"Menu_botaoIniciar",
 					"Menu_jogar",
-					"Menu_transicao"
+					"Menu_transicao",
+					"Menu_botaotutorial",
+					"Menu_logo",
+					"Menu_botaosair",
+					"Menu_botaocreditos",
+					"Textodecrditos",
+					"setaTutorial",
+					"Menu_barco",
+					"Menu_colisor",
+					"Particles"
 				],
 				"subfolders": [],
 				"name": "Menu"
@@ -209,7 +235,9 @@
 					"tempo",
 					"retornar",
 					"sair",
-					"pausado"
+					"pausado",
+					"madeiraDetalhe",
+					"vida"
 				],
 				"subfolders": [],
 				"name": "HUD do jogo"
@@ -229,14 +257,18 @@
 	"layouts": {
 		"items": [
 			"Layout 1",
-			"Menu"
+			"Menu",
+			"Tutorial",
+			"Creditos"
 		],
 		"subfolders": []
 	},
 	"eventSheets": {
 		"items": [
 			"Event sheet 1",
-			"Event sheet menu"
+			"Event sheet menu",
+			"Event sheet tutorial",
+			"Event sheet creditos"
 		],
 		"subfolders": []
 	},

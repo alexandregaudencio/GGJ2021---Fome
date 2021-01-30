@@ -6,9 +6,9 @@
 	"instanceVariables": [],
 	"behaviorTypes": [
 		{
-			"behaviorId": "Tween",
-			"name": "Tween",
-			"sid": 498016216914778
+			"behaviorId": "Pin",
+			"name": "Pin",
+			"sid": 436963801686231
 		}
 	],
 	"effectTypes": []

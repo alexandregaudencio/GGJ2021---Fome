@@ -1,14 +1,19 @@
 {
-	"name": "Menu_botao",
+	"name": "Menu_botaocreditos",
 	"plugin-id": "Sprite",
-	"sid": 129582239526446,
+	"sid": 602573730721927,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [
 		{
+			"behaviorId": "Pin",
+			"name": "Pin",
+			"sid": 257438666597131
+		},
+		{
 			"behaviorId": "Tween",
 			"name": "Tween",
-			"sid": 168891391846525
+			"sid": 653890620406098
 		}
 	],
 	"effectTypes": [],
@@ -24,7 +29,7 @@
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 9272458,
+						"imageSpriteId": 1851193,
 						"collisionPoly": {
 							"points": [
 								0,
@@ -49,7 +54,7 @@
 						"duration": 1
 					}
 				],
-				"sid": 170775224115702,
+				"sid": 483412194487027,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

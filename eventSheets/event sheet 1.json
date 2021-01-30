@@ -277,6 +277,24 @@
 							"parameters": {
 								"text": "contadordetempo"
 							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "vida",
+							"sid": 271933998582677,
+							"parameters": {
+								"instance-variable": "animacao",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "vida",
+							"sid": 554093419895978,
+							"parameters": {
+								"animation": "\"inicial\"",
+								"from": "beginning"
+							}
 						}
 					],
 					"sid": 520424185773751
@@ -1275,35 +1293,8 @@
 							}
 						},
 						{
-							"id": "set-fade-in-time",
-							"objectClass": "Menu_transicao",
-							"sid": 722335917030692,
-							"behaviorType": "Fade",
-							"parameters": {
-								"fade-in-time": "1"
-							}
-						},
-						{
-							"id": "start-fade",
-							"objectClass": "Menu_transicao",
-							"sid": 571483723989284,
-							"behaviorType": "Fade"
-						},
-						{
-							"id": "wait",
-							"objectClass": "System",
-							"sid": 594464871989089,
-							"parameters": {
-								"seconds": "1.0"
-							}
-						},
-						{
-							"id": "go-to-layout",
-							"objectClass": "System",
-							"sid": 176976722464696,
-							"parameters": {
-								"layout": "Menu"
-							}
+							"callFunction": "transicao",
+							"sid": 809408076569502
 						}
 					],
 					"sid": 741985503499768
@@ -1332,6 +1323,14 @@
 							}
 						},
 						{
+							"id": "set-font-color",
+							"objectClass": "tempo",
+							"sid": 710646107612832,
+							"parameters": {
+								"color": "rgbEx(255, 255, 255)"
+							}
+						},
+						{
 							"id": "start-timer",
 							"objectClass": "tempo",
 							"sid": 553103730494375,
@@ -1348,6 +1347,22 @@
 							"sid": 644645422539979,
 							"parameters": {
 								"text": "contadordetempo"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 448574872260064,
+							"parameters": {
+								"seconds": "0.1"
+							}
+						},
+						{
+							"id": "set-font-color",
+							"objectClass": "tempo",
+							"sid": 314949103091843,
+							"parameters": {
+								"color": "rgbEx(0, 0, 0)"
 							}
 						}
 					],
@@ -1377,6 +1392,232 @@
 						}
 					],
 					"sid": 770115033404107
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "player",
+							"sid": 320553401207701,
+							"parameters": {
+								"object": "enemy1"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 134373211879001,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "vida",
+									"sid": 902906450849625,
+									"parameters": {
+										"instance-variable": "animacao",
+										"comparison": 0,
+										"value": "0"
+									}
+								},
+								{
+									"id": "is-animation-playing",
+									"objectClass": "vida",
+									"sid": 828549102839475,
+									"parameters": {
+										"animation": "\"um\""
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "vida",
+									"sid": 390272033087538,
+									"parameters": {
+										"animation": "\"um\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 421229310969310,
+									"parameters": {
+										"seconds": "1.0"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "vida",
+									"sid": 195404319842461,
+									"parameters": {
+										"instance-variable": "animacao",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 344175720722725
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "vida",
+									"sid": 161685164231081,
+									"parameters": {
+										"instance-variable": "animacao",
+										"comparison": 0,
+										"value": "1"
+									}
+								},
+								{
+									"id": "is-animation-playing",
+									"objectClass": "vida",
+									"sid": 681351483187516,
+									"parameters": {
+										"animation": "\"dois\""
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "vida",
+									"sid": 962668940586365,
+									"parameters": {
+										"animation": "\"dois\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 957661651555982,
+									"parameters": {
+										"seconds": "1.0"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "vida",
+									"sid": 435055105726462,
+									"parameters": {
+										"instance-variable": "animacao",
+										"value": "2"
+									}
+								}
+							],
+							"sid": 412275247088588
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "vida",
+									"sid": 461546429080766,
+									"parameters": {
+										"instance-variable": "animacao",
+										"comparison": 0,
+										"value": "2"
+									}
+								},
+								{
+									"id": "is-animation-playing",
+									"objectClass": "vida",
+									"sid": 270798725977937,
+									"parameters": {
+										"animation": "\"tres\""
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "vida",
+									"sid": 444243290354798,
+									"parameters": {
+										"animation": "\"tres\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 297671077911966,
+									"parameters": {
+										"seconds": "1.0"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "vida",
+									"sid": 252219110139130,
+									"parameters": {
+										"instance-variable": "animacao",
+										"value": "3"
+									}
+								}
+							],
+							"sid": 271414438417582
+						},
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [],
+							"sid": 952251976149515
+						}
+					]
+				},
+				{
+					"functionName": "transicao",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-fade-in-time",
+							"objectClass": "Menu_transicao",
+							"sid": 718745941942131,
+							"behaviorType": "Fade",
+							"parameters": {
+								"fade-in-time": "1"
+							}
+						},
+						{
+							"id": "start-fade",
+							"objectClass": "Menu_transicao",
+							"sid": 935899452729241,
+							"behaviorType": "Fade"
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 545186582482382,
+							"parameters": {
+								"seconds": "1.0"
+							}
+						},
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 202975338264178,
+							"parameters": {
+								"layout": "Menu"
+							}
+						}
+					],
+					"sid": 904972514641169
 				}
 			],
 			"sid": 635600917650397
@@ -1402,12 +1643,25 @@
 					],
 					"actions": [
 						{
+							"id": "destroy",
+							"objectClass": "moeda",
+							"sid": 618813324993717
+						},
+						{
 							"id": "add-to-eventvar",
 							"objectClass": "System",
 							"sid": 455790643223283,
 							"parameters": {
 								"variable": "contandoMoedas",
 								"value": "1"
+							}
+						},
+						{
+							"id": "set-font-color",
+							"objectClass": "contadorDeMoedas",
+							"sid": 556828186750933,
+							"parameters": {
+								"color": "rgbEx(255, 255, 255)"
 							}
 						},
 						{
@@ -1419,9 +1673,20 @@
 							}
 						},
 						{
-							"id": "destroy",
-							"objectClass": "moeda",
-							"sid": 688237934261932
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 357852221004674,
+							"parameters": {
+								"seconds": "0.1"
+							}
+						},
+						{
+							"id": "set-font-color",
+							"objectClass": "contadorDeMoedas",
+							"sid": 324255907872432,
+							"parameters": {
+								"color": "rgbEx(0, 0, 0)"
+							}
 						}
 					],
 					"sid": 312067456553612

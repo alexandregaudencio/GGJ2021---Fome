@@ -463,8 +463,8 @@
 						}
 					},
 					"world": {
-						"x": 1408,
-						"y": 992,
+						"x": 1472,
+						"y": 960,
 						"width": 32,
 						"height": 64,
 						"originX": 0.5,
@@ -1085,7 +1085,7 @@
 						"vertical-alignment": "top",
 						"wrapping": "word",
 						"initially-visible": true,
-						"origin": "center"
+						"origin": "left"
 					},
 					"uid": 17,
 					"instanceVariables": {},
@@ -1096,10 +1096,10 @@
 					},
 					"world": {
 						"x": 192,
-						"y": 64,
-						"width": 224,
+						"y": 96,
+						"width": 96,
 						"height": 64,
-						"originX": 0.5,
+						"originX": 0,
 						"originY": 0.5,
 						"color": [
 							1,
@@ -1152,7 +1152,7 @@
 						"text": "60",
 						"enable-bbcode": true,
 						"font": "PirataOne-Regular",
-						"size": 30,
+						"size": 60,
 						"line-height": 0,
 						"bold": false,
 						"italic": false,
@@ -1176,10 +1176,10 @@
 						}
 					},
 					"world": {
-						"x": 160,
-						"y": 128,
+						"x": 672,
+						"y": 64,
 						"width": 160,
-						"height": 64,
+						"height": 96,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -1321,6 +1321,66 @@
 						"y": 256,
 						"width": 192,
 						"height": 96,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "madeiraDetalhe",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 18,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 96,
+						"y": 64,
+						"width": 160,
+						"height": 64,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "vida",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "inicial",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 38,
+					"instanceVariables": {
+						"animacao": 0
+					},
+					"behaviors": {},
+					"world": {
+						"x": 224,
+						"y": 32,
+						"width": 128,
+						"height": 32,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [

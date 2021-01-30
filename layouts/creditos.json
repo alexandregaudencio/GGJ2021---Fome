@@ -1,33 +1,46 @@
 {
-	"name": "Menu",
+	"name": "Creditos",
 	"layers": [
 		{
 			"name": "Layer 0",
 			"overriden": 0,
 			"instances": [
 				{
-					"type": "Menu_botaoIniciar",
+					"type": "Menu_jogar",
 					"properties": {
+						"text": "Sulivan Sérgio",
+						"enable-bbcode": true,
+						"font": "PirataOne-Regular",
+						"size": 30,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0.21568627450980393,
+							0.34901960784313724,
+							0.4627450980392157,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
 						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
+						"origin": "center"
 					},
-					"uid": 22,
+					"uid": 47,
 					"instanceVariables": {},
 					"behaviors": {
-						"Tween": {
+						"Pin": {
 							"properties": {
-								"enabled": true
+								"destroy": false
 							}
 						}
 					},
 					"world": {
 						"x": 640,
-						"y": 800,
-						"width": 197.9840226382011,
-						"height": 59.65316643007689,
+						"y": -116,
+						"width": 229.30803906836968,
+						"height": 60.54470323065365,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -41,33 +54,41 @@
 					}
 				},
 				{
-					"type": "Menu_botaotutorial",
+					"type": "Menu_jogar",
 					"properties": {
+						"text": "Paola Silva",
+						"enable-bbcode": true,
+						"font": "PirataOne-Regular",
+						"size": 30,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0.21568627450980393,
+							0.34901960784313724,
+							0.4627450980392157,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
 						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
+						"origin": "center"
 					},
-					"uid": 39,
+					"uid": 48,
 					"instanceVariables": {},
 					"behaviors": {
 						"Pin": {
 							"properties": {
 								"destroy": false
 							}
-						},
-						"Tween": {
-							"properties": {
-								"enabled": true
-							}
 						}
 					},
 					"world": {
 						"x": 640,
-						"y": 900,
-						"width": 197.984023,
-						"height": 59.653166,
+						"y": -336,
+						"width": 184.30803906836968,
+						"height": 61.54470323065365,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -89,7 +110,7 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 40,
+					"uid": 56,
 					"instanceVariables": {},
 					"behaviors": {
 						"Pin": {
@@ -104,8 +125,8 @@
 						}
 					},
 					"world": {
-						"x": 640,
-						"y": 1000,
+						"x": 1131,
+						"y": 642,
 						"width": 197.984023,
 						"height": 59.653166,
 						"originX": 0.5,
@@ -117,131 +138,11 @@
 							1
 						],
 						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "Menu_logo",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 41,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": 640,
-						"y": -150,
-						"width": 355.7635018756548,
-						"height": 355.76350187565487,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "Menu_botaosair",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 42,
-					"instanceVariables": {},
-					"behaviors": {
-						"Pin": {
-							"properties": {
-								"destroy": false
-							}
-						},
-						"Tween": {
-							"properties": {
-								"enabled": true
-							}
-						}
-					},
-					"world": {
-						"x": 640,
-						"y": 1100,
-						"width": 197.984023,
-						"height": 59.653166,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "Particles",
-					"properties": {
-						"rate": 3,
-						"spray-cone": 1,
-						"type": "continuous-spray",
-						"object": -1,
-						"live-preview": false,
-						"speed": 200,
-						"size": 32,
-						"opacity": 100,
-						"grow-rate": 0,
-						"x-randomiser": 0,
-						"y-randomiser": 0,
-						"initial-speed-randomiser": 0,
-						"size-randomiser": 0,
-						"grow-rate-randomiser": 0,
-						"acceleration": -150,
-						"gravity": 400,
-						"angle-randomiser": 0,
-						"life-speed-randomiser": 800,
-						"opacity-randomiser": 0,
-						"destroy-mode": "timeout-expired",
-						"timeout": 3
-					},
-					"uid": 68,
-					"instanceVariables": {},
-					"behaviors": {
-						"Pin": {
-							"properties": {
-								"destroy": false
-							}
-						}
-					},
-					"world": {
-						"x": -188.9138834000538,
-						"y": 482.4401911437483,
-						"width": 100,
-						"height": 100,
-						"originX": 0,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 3.914060855870667,
 						"zElevation": 0
 					}
 				}
 			],
-			"sid": 389957268249380,
+			"sid": 337154682439535,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"color": [
@@ -272,7 +173,7 @@
 				{
 					"type": "Menu_jogar",
 					"properties": {
-						"text": "Jogar",
+						"text": "Alexandre Gaudêncio",
 						"enable-bbcode": true,
 						"font": "PirataOne-Regular",
 						"size": 30,
@@ -280,9 +181,9 @@
 						"bold": false,
 						"italic": false,
 						"color": [
-							1,
-							1,
-							1,
+							0.21568627450980393,
+							0.34901960784313724,
+							0.4627450980392157,
 							1
 						],
 						"horizontal-alignment": "left",
@@ -291,7 +192,7 @@
 						"initially-visible": true,
 						"origin": "center"
 					},
-					"uid": 23,
+					"uid": 49,
 					"instanceVariables": {},
 					"behaviors": {
 						"Pin": {
@@ -302,9 +203,9 @@
 					},
 					"world": {
 						"x": 640,
-						"y": 800,
-						"width": 81.30803906836968,
-						"height": 60.54470323065365,
+						"y": -48,
+						"width": 342.3080390683697,
+						"height": 61.54470323065365,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -320,7 +221,7 @@
 				{
 					"type": "Menu_jogar",
 					"properties": {
-						"text": "Tutorial",
+						"text": "Francisco de Souza",
 						"enable-bbcode": true,
 						"font": "PirataOne-Regular",
 						"size": 30,
@@ -328,9 +229,9 @@
 						"bold": false,
 						"italic": false,
 						"color": [
-							1,
-							1,
-							1,
+							0.21568627450980393,
+							0.34901960784313724,
+							0.4627450980392157,
 							1
 						],
 						"horizontal-alignment": "left",
@@ -339,7 +240,7 @@
 						"initially-visible": true,
 						"origin": "center"
 					},
-					"uid": 43,
+					"uid": 50,
 					"instanceVariables": {},
 					"behaviors": {
 						"Pin": {
@@ -350,9 +251,9 @@
 					},
 					"world": {
 						"x": 640,
-						"y": 900,
-						"width": 109.88961260718656,
-						"height": 60.54470323065365,
+						"y": -477,
+						"width": 297.3080390683697,
+						"height": 61.54470323065365,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -368,7 +269,7 @@
 				{
 					"type": "Menu_jogar",
 					"properties": {
-						"text": "Créditos",
+						"text": "Gabriel Pestana",
 						"enable-bbcode": true,
 						"font": "PirataOne-Regular",
 						"size": 30,
@@ -376,9 +277,9 @@
 						"bold": false,
 						"italic": false,
 						"color": [
-							1,
-							1,
-							1,
+							0.21568627450980393,
+							0.34901960784313724,
+							0.4627450980392157,
 							1
 						],
 						"horizontal-alignment": "left",
@@ -387,7 +288,7 @@
 						"initially-visible": true,
 						"origin": "center"
 					},
-					"uid": 44,
+					"uid": 51,
 					"instanceVariables": {},
 					"behaviors": {
 						"Pin": {
@@ -398,9 +299,9 @@
 					},
 					"world": {
 						"x": 640,
-						"y": 1000,
-						"width": 117.92224202271336,
-						"height": 60.54470323065365,
+						"y": -256,
+						"width": 242.30803906836968,
+						"height": 61.54470323065365,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -415,6 +316,150 @@
 				},
 				{
 					"type": "Menu_jogar",
+					"properties": {
+						"text": "Programadores",
+						"enable-bbcode": true,
+						"font": "PirataOne-Regular",
+						"size": 40,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "center"
+					},
+					"uid": 52,
+					"instanceVariables": {},
+					"behaviors": {
+						"Pin": {
+							"properties": {
+								"destroy": false
+							}
+						}
+					},
+					"world": {
+						"x": 640,
+						"y": -200,
+						"width": 310.3080390683697,
+						"height": 61.54470323065365,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Menu_jogar",
+					"properties": {
+						"text": "Artistas",
+						"enable-bbcode": true,
+						"font": "PirataOne-Regular",
+						"size": 40,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "center"
+					},
+					"uid": 53,
+					"instanceVariables": {},
+					"behaviors": {
+						"Pin": {
+							"properties": {
+								"destroy": false
+							}
+						}
+					},
+					"world": {
+						"x": 640,
+						"y": -409,
+						"width": 162.30803906836968,
+						"height": 61.54470323065365,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Menu_jogar",
+					"properties": {
+						"text": "Game Design",
+						"enable-bbcode": true,
+						"font": "PirataOne-Regular",
+						"size": 40,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "center"
+					},
+					"uid": 54,
+					"instanceVariables": {},
+					"behaviors": {
+						"Pin": {
+							"properties": {
+								"destroy": false
+							}
+						}
+					},
+					"world": {
+						"x": 640,
+						"y": -563,
+						"width": 255.30803906836968,
+						"height": 61.54470323065365,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Textodecrditos",
 					"properties": {
 						"text": "Sair",
 						"enable-bbcode": true,
@@ -435,20 +480,14 @@
 						"initially-visible": true,
 						"origin": "center"
 					},
-					"uid": 45,
+					"uid": 57,
 					"instanceVariables": {},
-					"behaviors": {
-						"Pin": {
-							"properties": {
-								"destroy": false
-							}
-						}
-					},
+					"behaviors": {},
 					"world": {
-						"x": 640,
-						"y": 1094.7221687539973,
-						"width": 70.13145525330481,
-						"height": 49.98904073864796,
+						"x": 1135,
+						"y": 639,
+						"width": 74,
+						"height": 55,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -460,71 +499,9 @@
 						"angle": 0,
 						"zElevation": 0
 					}
-				},
-				{
-					"type": "Menu_barco",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 65,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": -192,
-						"y": 484,
-						"width": 758,
-						"height": 322,
-						"originX": 0.07519788918205805,
-						"originY": 0.2701863354037267,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "Menu_colisor",
-					"properties": {
-						"initially-visible": true,
-						"origin": "top-left",
-						"wrap-horizontal": "repeat",
-						"wrap-vertical": "repeat",
-						"image-offset-x": 0,
-						"image-offset-y": 0,
-						"image-scale-x": 1,
-						"image-scale-y": 1,
-						"image-angle": 0
-					},
-					"uid": 66,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": 1532,
-						"y": 5,
-						"width": 100,
-						"height": 859,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
 				}
 			],
-			"sid": 406757081455896,
+			"sid": 323105415916582,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"color": [
@@ -565,7 +542,7 @@
 						"image-scale-y": 1,
 						"image-angle": 0
 					},
-					"uid": 24,
+					"uid": 55,
 					"instanceVariables": {},
 					"behaviors": {
 						"Fade": {
@@ -581,9 +558,9 @@
 					},
 					"world": {
 						"x": 0,
-						"y": -6,
-						"width": 1288,
-						"height": 735,
+						"y": 0,
+						"width": 5152,
+						"height": 1952,
 						"originX": 0,
 						"originY": 0,
 						"color": [
@@ -597,7 +574,7 @@
 					}
 				}
 			],
-			"sid": 670505260119382,
+			"sid": 112118524805851,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"color": [
@@ -622,11 +599,11 @@
 			"global": false
 		}
 	],
-	"sid": 460962812449998,
+	"sid": 258034962348911,
 	"nonworld-instances": [],
 	"effectTypes": [],
 	"width": 2560,
 	"height": 1440,
 	"unboundedScrolling": false,
-	"eventSheet": "Event sheet menu"
+	"eventSheet": "Event sheet creditos"
 }

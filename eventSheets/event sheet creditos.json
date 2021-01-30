@@ -1,0 +1,174 @@
+{
+	"name": "Event sheet creditos",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "creditos",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 997638882638591
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 338012575006009
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position",
+					"objectClass": "Menu_jogar",
+					"sid": 126630469924498,
+					"parameters": {
+						"x": "Menu_jogar.X",
+						"y": "Menu_jogar.Y + (100 *dt)"
+					}
+				}
+			],
+			"sid": 547772437853194,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-y",
+							"objectClass": "Menu_jogar",
+							"sid": 131612586372615,
+							"parameters": {
+								"comparison": 5,
+								"y-co-ordinate": "1300"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "transicaoCreditoseMenu",
+							"sid": 198123848166451
+						}
+					],
+					"sid": 148990070098723
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 421945458127775
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 410124331162659,
+					"parameters": {
+						"variable": "creditos",
+						"value": "false"
+					}
+				}
+			],
+			"sid": 357639654339031
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 862814661762337,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "Menu_botaocreditos"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "tween-two-properties",
+					"objectClass": "Menu_botaocreditos",
+					"sid": 630356044576841,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "scale",
+						"end-x": "1.2",
+						"end-y": "1.2",
+						"time": "0.5",
+						"ease": "easeoutelastic",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "yes"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 254153626041927,
+					"parameters": {
+						"seconds": "1.0"
+					}
+				},
+				{
+					"callFunction": "transicaoCreditoseMenu",
+					"sid": 964925728245715
+				}
+			],
+			"sid": 652102274159100
+		},
+		{
+			"functionName": "transicaoCreditoseMenu",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-fade-in-time",
+					"objectClass": "Menu_transicao",
+					"sid": 950960294126156,
+					"behaviorType": "Fade",
+					"parameters": {
+						"fade-in-time": "1"
+					}
+				},
+				{
+					"id": "start-fade",
+					"objectClass": "Menu_transicao",
+					"sid": 907802506536521,
+					"behaviorType": "Fade"
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 782932256262868,
+					"parameters": {
+						"seconds": "1.0"
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 509347420710292,
+					"parameters": {
+						"layout": "Menu"
+					}
+				}
+			],
+			"sid": 218553011947554
+		}
+	],
+	"sid": 150841786544845
+}
