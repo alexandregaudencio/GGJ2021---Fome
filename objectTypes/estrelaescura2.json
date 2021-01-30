@@ -1,0 +1,57 @@
+{
+	"name": "estrelaescura2",
+	"plugin-id": "Sprite",
+	"sid": 709458596146570,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 163,
+						"height": 156,
+						"originX": 0.49693251533742333,
+						"originY": 0.46153846153846156,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4372719,
+						"collisionPoly": {
+							"points": [
+								0.3006134969325153,
+								0.3141025641025641,
+								0.5,
+								0,
+								0.6993865030674846,
+								0.3076923076923077,
+								0.901840490797546,
+								0.5,
+								0.7791411042944786,
+								0.7692307692307693,
+								0.5,
+								0.8653846153846154,
+								0.2147239263803681,
+								0.7692307692307693,
+								0.09815950920245399,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 501899093767758,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

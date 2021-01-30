@@ -82,6 +82,16 @@
 			"sid": 108290408388665
 		},
 		{
+			"eventType": "variable",
+			"name": "quebrandooCiclo",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 206693260242131
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "StartConfig",
@@ -265,7 +275,7 @@
 						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
-							"sid": 946252418880724,
+							"sid": 602223221488654,
 							"parameters": {
 								"variable": "contadordetempo",
 								"value": "600"
@@ -322,6 +332,15 @@
 							"sid": 844841754520774,
 							"parameters": {
 								"variable": "pausar",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 313402442666807,
+							"parameters": {
+								"variable": "quebrandooCiclo",
 								"value": "false"
 							}
 						},
@@ -1179,6 +1198,14 @@
 							}
 						},
 						{
+							"id": "set-text",
+							"objectClass": "pausado",
+							"sid": 553446318343923,
+							"parameters": {
+								"text": "\"Pausado\""
+							}
+						},
+						{
 							"id": "set-boolean-eventvar",
 							"objectClass": "System",
 							"sid": 510481641592011,
@@ -1362,15 +1389,81 @@
 							"sid": 962895380383019
 						}
 					],
-					"sid": 166397717636895,
-					"children": [
+					"sid": 166397717636895
+				},
+				{
+					"eventType": "block",
+					"conditions": [
 						{
-							"eventType": "block",
-							"conditions": [],
-							"actions": [],
-							"sid": 417206823032069
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 806119310682941,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "sair"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 107971850016130,
+							"parameters": {
+								"variable": "contandoMoedas",
+								"comparison": 0,
+								"value": "6"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 828358683081129,
+							"parameters": {
+								"variable": "pausar"
+							}
 						}
-					]
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 907292099437052,
+							"parameters": {
+								"variable": "pausar",
+								"value": "false"
+							}
+						},
+						{
+							"id": "tween-two-properties",
+							"objectClass": "sair",
+							"sid": 426401244686571,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"\"",
+								"property": "scale",
+								"end-x": "1.2",
+								"end-y": "1.2",
+								"time": "0.5",
+								"ease": "easeoutelastic",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "yes"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 191569547666039,
+							"parameters": {
+								"seconds": "1.0"
+							}
+						},
+						{
+							"callFunction": "transicao",
+							"sid": 960954020091224
+						}
+					],
+					"sid": 386519433807420
 				},
 				{
 					"eventType": "block",
@@ -1578,74 +1671,6 @@
 						}
 					],
 					"sid": 773659158185649
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 423938238500733,
-							"parameters": {
-								"variable": "vida",
-								"comparison": 0,
-								"value": "0"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-visible",
-							"objectClass": "pausado",
-							"sid": 243129212690105,
-							"parameters": {
-								"visibility": "visible"
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "Menu_pausar",
-							"sid": 150838225250628,
-							"parameters": {
-								"visibility": "visible"
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "sair",
-							"sid": 922879986985725,
-							"parameters": {
-								"visibility": "visible"
-							}
-						},
-						{
-							"id": "set-text",
-							"objectClass": "pausado",
-							"sid": 228043995758386,
-							"parameters": {
-								"text": "\"Game Over\""
-							}
-						},
-						{
-							"id": "add-to-eventvar",
-							"objectClass": "System",
-							"sid": 399766670699974,
-							"parameters": {
-								"variable": "vida",
-								"value": "-1"
-							}
-						},
-						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 807457245293290,
-							"parameters": {
-								"variable": "pausar",
-								"value": "true"
-							}
-						}
-					],
-					"sid": 410580070845230
 				},
 				{
 					"eventType": "comment",
@@ -1969,6 +1994,325 @@
 							"sid": 684316184613033
 						}
 					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 845926906785992,
+							"parameters": {
+								"variable": "vida",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "pausado",
+							"sid": 415915181095596,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Menu_pausar",
+							"sid": 277605644218795,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "sair",
+							"sid": 604812357937787,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "pausado",
+							"sid": 949795357448478,
+							"parameters": {
+								"text": "\"Game Over\""
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 648940505082811,
+							"parameters": {
+								"variable": "vida",
+								"value": "-1"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 158833253131014,
+							"parameters": {
+								"variable": "pausar",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 200822535049827
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 622437581349117,
+							"parameters": {
+								"variable": "contandoMoedas",
+								"comparison": 0,
+								"value": "6"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 328589505094813,
+							"parameters": {
+								"variable": "quebrandooCiclo"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Menu_pausar",
+							"sid": 329573939892654,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "sair",
+							"sid": 213423961975516,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 670688710884105,
+							"parameters": {
+								"variable": "quebrandooCiclo",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 856151371299784,
+							"parameters": {
+								"variable": "pausar",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 183816768755395
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 809492066626990,
+							"parameters": {
+								"variable": "contandoMoedas",
+								"comparison": 0,
+								"value": "6"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 298592125780347,
+							"parameters": {
+								"variable": "contadordetempo",
+								"comparison": 5,
+								"value": "40"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "estrela1",
+							"sid": 851614386425545,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "estrela2",
+							"sid": 795698143217500,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "estrela3",
+							"sid": 269149751114559,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 978456640009843
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 319602443414342,
+							"parameters": {
+								"variable": "contandoMoedas",
+								"comparison": 0,
+								"value": "6"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 745646914900899,
+							"parameters": {
+								"variable": "contadordetempo",
+								"comparison": 5,
+								"value": "20"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 931568595642678,
+							"parameters": {
+								"variable": "contadordetempo",
+								"comparison": 2,
+								"value": "40"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "estrela1",
+							"sid": 752087209718758,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "estrela2",
+							"sid": 698465767122785,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "estrela3",
+							"sid": 543346694228956,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "estrelaescura3",
+							"sid": 768485323962846,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 685474372527118
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 751652640521312,
+							"parameters": {
+								"variable": "contandoMoedas",
+								"comparison": 0,
+								"value": "6"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 119351129826673,
+							"parameters": {
+								"variable": "contadordetempo",
+								"comparison": 2,
+								"value": "20"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "estrela1",
+							"sid": 973687349611343,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "estrela2",
+							"sid": 796222941056866,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "estrela3",
+							"sid": 528598244790110,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "estrelaescura2",
+							"sid": 884739782757967,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "estrelaescura3",
+							"sid": 596150898353035,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 613228263819825
 				}
 			],
 			"sid": 406486674961154

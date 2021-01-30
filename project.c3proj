@@ -237,7 +237,12 @@
 					"sair",
 					"pausado",
 					"madeiraDetalhe",
-					"vida"
+					"vida",
+					"estrela2",
+					"estrela1",
+					"estrela3",
+					"estrelaescura3",
+					"estrelaescura2"
 				],
 				"subfolders": [],
 				"name": "HUD do jogo"
