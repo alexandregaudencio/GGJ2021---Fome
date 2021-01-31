@@ -269,10 +269,10 @@
 						{
 							"id": "set-position",
 							"objectClass": "startPosition",
-							"sid": 152058299297214,
+							"sid": 359983874065885,
 							"parameters": {
-								"x": "lerp(startPosition.X, player.X, 0.02)",
-								"y": "lerp(startPosition.Y, player.Y -Yplus, 0.05)"
+								"x": "lerp(startPosition.X, player.X, 0.04)",
+								"y": "lerp(startPosition.Y, player.Y -Yplus, 0.2)"
 							}
 						}
 					],
@@ -1866,6 +1866,16 @@
 								"comparison": 2,
 								"value": "20"
 							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 887746097725384,
+							"parameters": {
+								"variable": "contandoMoedas",
+								"comparison": 0,
+								"value": "6"
+							}
 						}
 					],
 					"actions": [
@@ -2435,8 +2445,18 @@
 							"id": "go-to-layout",
 							"objectClass": "System",
 							"sid": 695188241236398,
+							"disabled": true,
 							"parameters": {
 								"layout": "Menu"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 631051055489999,
+							"parameters": {
+								"variable": "vida",
+								"value": "0"
 							}
 						}
 					],
