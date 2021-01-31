@@ -2342,12 +2342,11 @@
 							}
 						},
 						{
-							"callFunction": "transicao",
-							"sid": 387393979734094
+							"callFunction": "transicaoNextLayout",
+							"sid": 312700315131951
 						}
 					],
-					"sid": 948138139441371,
-					"disabled": true
+					"sid": 948138139441371
 				},
 				{
 					"eventType": "block",
@@ -2573,7 +2572,7 @@
 						{
 							"id": "set-fade-in-time",
 							"objectClass": "Menu_transicao",
-							"sid": 718745941942131,
+							"sid": 963688708112232,
 							"behaviorType": "Fade",
 							"parameters": {
 								"fade-in-time": "1"
@@ -2582,13 +2581,13 @@
 						{
 							"id": "start-fade",
 							"objectClass": "Menu_transicao",
-							"sid": 935899452729241,
+							"sid": 696469151464953,
 							"behaviorType": "Fade"
 						},
 						{
 							"id": "wait",
 							"objectClass": "System",
-							"sid": 545186582482382,
+							"sid": 653429487451179,
 							"parameters": {
 								"seconds": "1.0"
 							}
@@ -2596,13 +2595,57 @@
 						{
 							"id": "go-to-layout",
 							"objectClass": "System",
-							"sid": 202975338264178,
+							"sid": 325899026503023,
 							"parameters": {
 								"layout": "Menu"
 							}
 						}
 					],
 					"sid": 904972514641169
+				},
+				{
+					"functionName": "transicaoNextLayout",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-fade-in-time",
+							"objectClass": "Menu_transicao",
+							"sid": 535033630397634,
+							"behaviorType": "Fade",
+							"parameters": {
+								"fade-in-time": "1"
+							}
+						},
+						{
+							"id": "start-fade",
+							"objectClass": "Menu_transicao",
+							"sid": 135672122726552,
+							"behaviorType": "Fade"
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 369859397919391,
+							"parameters": {
+								"seconds": "1.0"
+							}
+						},
+						{
+							"id": "go-to-nextprevious-layout",
+							"objectClass": "System",
+							"sid": 797063712057101,
+							"parameters": {
+								"which": "next"
+							}
+						}
+					],
+					"sid": 148699986597551
 				}
 			],
 			"sid": 635600917650397
@@ -2710,8 +2753,16 @@
 						},
 						{
 							"id": "set-visible",
+							"objectClass": "retornar",
+							"sid": 195984800305281,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
 							"objectClass": "sair",
-							"sid": 213423961975516,
+							"sid": 196608327055521,
 							"parameters": {
 								"visibility": "visible"
 							}

@@ -263,10 +263,10 @@
 	},
 	"layouts": {
 		"items": [
-			"Creditos",
 			"Menu",
 			"Layout 1",
-			"Layout 2"
+			"Layout 2",
+			"Creditos"
 		],
 		"subfolders": []
 	},

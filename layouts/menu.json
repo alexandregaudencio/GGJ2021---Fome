@@ -41,46 +41,6 @@
 					}
 				},
 				{
-					"type": "Menu_botaotutorial",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 39,
-					"instanceVariables": {},
-					"behaviors": {
-						"Pin": {
-							"properties": {
-								"destroy": false
-							}
-						},
-						"Tween": {
-							"properties": {
-								"enabled": true
-							}
-						}
-					},
-					"world": {
-						"x": 640,
-						"y": 900,
-						"width": 197.984023,
-						"height": 59.653166,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
 					"type": "Menu_botaocreditos",
 					"properties": {
 						"initially-visible": true,
@@ -105,7 +65,7 @@
 					},
 					"world": {
 						"x": 640,
-						"y": 1000,
+						"y": 900,
 						"width": 197.984023,
 						"height": 59.653166,
 						"originX": 0.5,
@@ -174,7 +134,7 @@
 					},
 					"world": {
 						"x": 640,
-						"y": 1100,
+						"y": 1000,
 						"width": 197.984023,
 						"height": 59.653166,
 						"originX": 0.5,
@@ -320,54 +280,6 @@
 				{
 					"type": "Menu_jogar",
 					"properties": {
-						"text": "Tutorial",
-						"enable-bbcode": true,
-						"font": "PirataOne-Regular",
-						"size": 30,
-						"line-height": 0,
-						"bold": false,
-						"italic": false,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"horizontal-alignment": "left",
-						"vertical-alignment": "top",
-						"wrapping": "word",
-						"initially-visible": true,
-						"origin": "center"
-					},
-					"uid": 43,
-					"instanceVariables": {},
-					"behaviors": {
-						"Pin": {
-							"properties": {
-								"destroy": false
-							}
-						}
-					},
-					"world": {
-						"x": 640,
-						"y": 900,
-						"width": 109.88961260718656,
-						"height": 60.54470323065365,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "Menu_jogar",
-					"properties": {
 						"text": "Créditos",
 						"enable-bbcode": true,
 						"font": "PirataOne-Regular",
@@ -398,7 +310,7 @@
 					},
 					"world": {
 						"x": 640,
-						"y": 1000,
+						"y": 900,
 						"width": 117.92224202271336,
 						"height": 60.54470323065365,
 						"originX": 0.5,
@@ -446,7 +358,7 @@
 					},
 					"world": {
 						"x": 640,
-						"y": 1094.7221687539973,
+						"y": 1000,
 						"width": 70.13145525330481,
 						"height": 49.98904073864796,
 						"originX": 0.5,
