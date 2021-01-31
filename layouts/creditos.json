@@ -499,6 +499,102 @@
 						"angle": 0,
 						"zElevation": 0
 					}
+				},
+				{
+					"type": "Menu_jogar",
+					"properties": {
+						"text": "Áudio Design",
+						"enable-bbcode": true,
+						"font": "PirataOne-Regular",
+						"size": 40,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "center"
+					},
+					"uid": 139,
+					"instanceVariables": {},
+					"behaviors": {
+						"Pin": {
+							"properties": {
+								"destroy": false
+							}
+						}
+					},
+					"world": {
+						"x": 640,
+						"y": -735,
+						"width": 258.3080390683697,
+						"height": 61.54470323065365,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Menu_jogar",
+					"properties": {
+						"text": "Pedro Silva",
+						"enable-bbcode": true,
+						"font": "PirataOne-Regular",
+						"size": 30,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0.21568627450980393,
+							0.34901960784313724,
+							0.4627450980392157,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "center"
+					},
+					"uid": 163,
+					"instanceVariables": {},
+					"behaviors": {
+						"Pin": {
+							"properties": {
+								"destroy": false
+							}
+						}
+					},
+					"world": {
+						"x": 640,
+						"y": -647,
+						"width": 168.30803906836968,
+						"height": 61.54470323065365,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
 				}
 			],
 			"sid": 323105415916582,

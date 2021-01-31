@@ -83,6 +83,17 @@
 						"variable": "botaoPressionado",
 						"value": "false"
 					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 921171042904696,
+					"parameters": {
+						"audio-file": "Musica_Loop_2",
+						"loop": "looping",
+						"volume": "0",
+						"tag-optional": "\"\""
+					}
 				}
 			],
 			"sid": 357639654339031

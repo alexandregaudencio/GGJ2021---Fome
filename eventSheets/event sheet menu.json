@@ -152,6 +152,17 @@
 						"height-type": "no",
 						"z": false
 					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 315787620286694,
+					"parameters": {
+						"audio-file": "Musica_Loop_2",
+						"loop": "looping",
+						"volume": "0",
+						"tag-optional": "\"\""
+					}
 				}
 			],
 			"sid": 589387833044080
