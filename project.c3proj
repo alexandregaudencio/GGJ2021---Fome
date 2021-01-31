@@ -306,12 +306,53 @@
 					"name": "som da moeda.webm",
 					"type": "audio/webm; codecs=opus",
 					"sid": 746464088975629
+				},
+				{
+					"name": "Passo_2.mp3",
+					"type": "audio/mpeg",
+					"sid": 314789171789830
+				},
+				{
+					"name": "Passo_1.mp3",
+					"type": "audio/mpeg",
+					"sid": 136581826997072
+				},
+				{
+					"name": "Fase_completa.mp3",
+					"type": "audio/mpeg",
+					"sid": 103566561667397
+				},
+				{
+					"name": "Morte_som.mp3",
+					"type": "audio/mpeg",
+					"sid": 565793860979643
+				},
+				{
+					"name": "Passo_3.mp3",
+					"type": "audio/mpeg",
+					"sid": 417499793838444
 				}
 			],
 			"subfolders": []
 		},
 		"music": {
-			"items": [],
+			"items": [
+				{
+					"name": "Musica_Loop_2.mp3",
+					"type": "audio/mpeg",
+					"sid": 972390282579764
+				},
+				{
+					"name": "musica_game_jamoficial.mp3",
+					"type": "audio/mpeg",
+					"sid": 609357331879592
+				},
+				{
+					"name": "Beach_Waves-Atribution_3.0.mp3",
+					"type": "audio/mpeg",
+					"sid": 165241391487761
+				}
+			],
 			"subfolders": []
 		},
 		"video": {
