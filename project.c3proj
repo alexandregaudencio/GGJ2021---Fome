@@ -233,7 +233,8 @@
 					"setaTutorial",
 					"Menu_barco",
 					"Menu_colisor",
-					"Particles"
+					"Particles",
+					"Menu_personagemDormindo"
 				],
 				"subfolders": [],
 				"name": "Menu"

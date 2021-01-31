@@ -2715,6 +2715,17 @@
 					],
 					"actions": [
 						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 655041645857149,
+							"parameters": {
+								"audio-file": "som da moeda",
+								"loop": "not-looping",
+								"volume": "-3",
+								"tag-optional": "\"\""
+							}
+						},
+						{
 							"id": "destroy",
 							"objectClass": "moeda",
 							"sid": 618813324993717
@@ -2758,17 +2769,6 @@
 							"sid": 324255907872432,
 							"parameters": {
 								"color": "rgbEx(0, 0, 0)"
-							}
-						},
-						{
-							"id": "play",
-							"objectClass": "Audio",
-							"sid": 228728141552117,
-							"parameters": {
-								"audio-file": "som da moeda",
-								"loop": "not-looping",
-								"volume": "-3",
-								"tag-optional": "\"\""
 							}
 						}
 					],

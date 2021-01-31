@@ -163,6 +163,29 @@
 						"volume": "0",
 						"tag-optional": "\"\""
 					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "Menu_personagemDormindo",
+					"sid": 407432311495882,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "Menu_barco",
+						"x": true,
+						"y": true,
+						"angle": false,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "start-animation",
+					"objectClass": "Menu_personagemDormindo",
+					"sid": 437972301406881,
+					"parameters": {
+						"from": "beginning"
+					}
 				}
 			],
 			"sid": 589387833044080
