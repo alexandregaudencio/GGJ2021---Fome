@@ -121,6 +121,17 @@
 					}
 				},
 				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 910801922353664,
+					"parameters": {
+						"audio-file": "som botao arrumado",
+						"loop": "not-looping",
+						"volume": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
 					"id": "tween-two-properties",
 					"objectClass": "Menu_botaocreditos",
 					"sid": 630356044576841,

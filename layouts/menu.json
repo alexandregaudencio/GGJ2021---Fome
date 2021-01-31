@@ -4,9 +4,37 @@
 		{
 			"name": "Layer 0",
 			"overriden": 0,
+			"instances": [],
+			"sid": 389957268249380,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				1,
+				1,
+				1,
+				1
+			],
+			"isTransparent": false,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"global": false
+		},
+		{
+			"name": "fundo",
+			"overriden": 0,
 			"instances": [
 				{
-					"type": "Menu_botaoIniciar",
+					"type": "water",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -14,22 +42,93 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 22,
+					"uid": 170,
 					"instanceVariables": {},
-					"behaviors": {
-						"Tween": {
-							"properties": {
-								"enabled": true
+					"behaviors": {},
+					"effects": {
+						"Water": {
+							"parameters": {
+								"speed": 0.12,
+								"x-speed": 0.3,
+								"y-speed": 0.08,
+								"intensity": 1,
+								"frequency": 7,
+								"angle": 7,
+								"delta": 100,
+								"reflectivity": 1200,
+								"emboss": 0.2
 							}
 						}
 					},
 					"world": {
-						"x": 640,
-						"y": 800,
-						"width": 197.9840226382011,
-						"height": 59.65316643007689,
+						"x": 704,
+						"y": 453,
+						"width": 1440,
+						"height": 863.9999999999999,
 						"originX": 0.5,
 						"originY": 0.5,
+						"color": [
+							0.9607843137254902,
+							0.9607843137254902,
+							0.9607843137254902,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				}
+			],
+			"sid": 376812145979039,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				1,
+				1,
+				1,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"global": false
+		},
+		{
+			"name": "fundo1",
+			"overriden": 0,
+			"instances": [
+				{
+					"type": "Background",
+					"properties": {
+						"initially-visible": true,
+						"origin": "top-left",
+						"wrap-horizontal": "repeat",
+						"wrap-vertical": "mirror-repeat",
+						"image-offset-x": 0,
+						"image-offset-y": 0,
+						"image-scale-x": 1,
+						"image-scale-y": 1,
+						"image-angle": 0
+					},
+					"uid": 169,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 0,
+						"y": 0,
+						"width": 1568,
+						"height": 586,
+						"originX": 0,
+						"originY": 0,
 						"color": [
 							1,
 							1,
@@ -39,7 +138,36 @@
 						"angle": 0,
 						"zElevation": 0
 					}
-				},
+				}
+			],
+			"sid": 109126422650459,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				1,
+				1,
+				1,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"global": false
+		},
+		{
+			"name": "botoes",
+			"overriden": 0,
+			"instances": [
 				{
 					"type": "Menu_botaocreditos",
 					"properties": {
@@ -81,35 +209,6 @@
 					}
 				},
 				{
-					"type": "Menu_logo",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 41,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": 640,
-						"y": -150,
-						"width": 355.7635018756548,
-						"height": 355.76350187565487,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
 					"type": "Menu_botaosair",
 					"properties": {
 						"initially-visible": true,
@@ -137,6 +236,41 @@
 						"y": 1000,
 						"width": 197.984023,
 						"height": 59.653166,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Menu_botaoIniciar",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 22,
+					"instanceVariables": {},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
+					"world": {
+						"x": 640,
+						"y": 800,
+						"width": 197.9840226382011,
+						"height": 59.65316643007689,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -201,7 +335,7 @@
 					}
 				}
 			],
-			"sid": 389957268249380,
+			"sid": 272230782862436,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"color": [
@@ -216,7 +350,7 @@
 				1,
 				1
 			],
-			"isTransparent": false,
+			"isTransparent": true,
 			"parallaxX": 1,
 			"parallaxY": 1,
 			"scaleRate": 1,
@@ -374,35 +508,6 @@
 					}
 				},
 				{
-					"type": "Menu_barco",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 65,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": -192,
-						"y": 484,
-						"width": 758,
-						"height": 322,
-						"originX": 0.07519788918205805,
-						"originY": 0.2701863354037267,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
 					"type": "Menu_colisor",
 					"properties": {
 						"initially-visible": true,
@@ -465,6 +570,64 @@
 						"y": 58,
 						"width": 353,
 						"height": 55,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Menu_barco",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 65,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": -192,
+						"y": 484,
+						"width": 758,
+						"height": 322,
+						"originX": 0.07519788918205805,
+						"originY": 0.2701863354037267,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Menu_logo",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 41,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 640,
+						"y": -150,
+						"width": 355.7635018756548,
+						"height": 355.76350187565487,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [

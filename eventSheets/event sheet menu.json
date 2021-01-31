@@ -367,6 +367,17 @@
 					}
 				},
 				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 667311543777493,
+					"parameters": {
+						"audio-file": "som botao arrumado",
+						"loop": "not-looping",
+						"volume": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
 					"id": "tween-two-properties",
 					"objectClass": "Menu_botaoIniciar",
 					"sid": 360109330785929,
@@ -462,6 +473,17 @@
 					}
 				},
 				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 742227907044458,
+					"parameters": {
+						"audio-file": "som botao arrumado",
+						"loop": "not-looping",
+						"volume": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
 					"id": "tween-two-properties",
 					"objectClass": "Menu_botaocreditos",
 					"sid": 397538149369050,
@@ -544,6 +566,17 @@
 					}
 				},
 				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 477794841496196,
+					"parameters": {
+						"audio-file": "som botao arrumado",
+						"loop": "not-looping",
+						"volume": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
 					"id": "tween-two-properties",
 					"objectClass": "Menu_botaotutorial",
 					"sid": 908953335276491,
@@ -590,7 +623,8 @@
 					"sid": 520564341049611
 				}
 			],
-			"sid": 524591902991820
+			"sid": 524591902991820,
+			"disabled": true
 		},
 		{
 			"eventType": "block",
@@ -623,6 +657,17 @@
 					"parameters": {
 						"variable": "botaoPressionado",
 						"value": "true"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 936576621544726,
+					"parameters": {
+						"audio-file": "som botao arrumado",
+						"loop": "not-looping",
+						"volume": "0",
+						"tag-optional": "\"\""
 					}
 				},
 				{

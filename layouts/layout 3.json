@@ -14,7 +14,7 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 119,
+					"uid": 175,
 					"instanceVariables": {},
 					"behaviors": {},
 					"effects": {
@@ -50,7 +50,7 @@
 					}
 				}
 			],
-			"sid": 475258743712679,
+			"sid": 574255398882639,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"color": [
@@ -91,7 +91,7 @@
 						"image-scale-y": 1,
 						"image-angle": 0
 					},
-					"uid": 120,
+					"uid": 176,
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
@@ -120,7 +120,7 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 121,
+					"uid": 177,
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
@@ -149,7 +149,7 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 122,
+					"uid": 178,
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
@@ -170,7 +170,7 @@
 					}
 				}
 			],
-			"sid": 166703063791438,
+			"sid": 969394543162138,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"color": [
@@ -207,7 +207,7 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 123,
+					"uid": 179,
 					"instanceVariables": {},
 					"behaviors": {
 						"Bullet": {
@@ -253,7 +253,7 @@
 						"tile-y-drawing-offset": 0,
 						"drawing-mode": "top-to-right"
 					},
-					"uid": 124,
+					"uid": 180,
 					"instanceVariables": {},
 					"behaviors": {},
 					"ownData": {
@@ -288,7 +288,7 @@
 					}
 				}
 			],
-			"sid": 777071256118005,
+			"sid": 945133675498308,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"color": [
@@ -330,7 +330,7 @@
 						"tile-y-drawing-offset": 0,
 						"drawing-mode": "top-to-right"
 					},
-					"uid": 125,
+					"uid": 181,
 					"instanceVariables": {},
 					"behaviors": {
 						"Jumpthru": {
@@ -404,7 +404,7 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 126,
+					"uid": 182,
 					"instanceVariables": {},
 					"behaviors": {
 						"ScrollTo": {
@@ -439,7 +439,7 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 127,
+					"uid": 183,
 					"instanceVariables": {},
 					"behaviors": {
 						"Solid": {
@@ -508,7 +508,7 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 128,
+					"uid": 184,
 					"instanceVariables": {},
 					"behaviors": {
 						"Solid": {
@@ -577,7 +577,7 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 129,
+					"uid": 185,
 					"instanceVariables": {},
 					"behaviors": {
 						"Pin": {
@@ -612,7 +612,7 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 130,
+					"uid": 186,
 					"instanceVariables": {},
 					"behaviors": {
 						"Pin": {
@@ -647,7 +647,7 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 131,
+					"uid": 187,
 					"instanceVariables": {},
 					"behaviors": {
 						"Pin": {
@@ -682,7 +682,7 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 132,
+					"uid": 188,
 					"instanceVariables": {},
 					"behaviors": {
 						"Pin": {
@@ -717,7 +717,7 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 133,
+					"uid": 189,
 					"instanceVariables": {},
 					"behaviors": {
 						"Pin": {
@@ -752,7 +752,7 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 134,
+					"uid": 190,
 					"instanceVariables": {},
 					"behaviors": {
 						"Pin": {
@@ -787,7 +787,7 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 135,
+					"uid": 191,
 					"instanceVariables": {},
 					"behaviors": {
 						"Pin": {
@@ -822,7 +822,7 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 136,
+					"uid": 192,
 					"instanceVariables": {},
 					"behaviors": {
 						"Pin": {
@@ -857,7 +857,7 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 137,
+					"uid": 193,
 					"instanceVariables": {},
 					"behaviors": {
 						"Pin": {
@@ -892,7 +892,7 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 144,
+					"uid": 194,
 					"instanceVariables": {
 						"diretionH": 1,
 						"jumping": false,
@@ -944,7 +944,7 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 14,
+					"uid": 195,
 					"instanceVariables": {},
 					"behaviors": {
 						"Pin": {
@@ -979,7 +979,7 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 138,
+					"uid": 196,
 					"instanceVariables": {},
 					"behaviors": {
 						"Pin": {
@@ -1014,7 +1014,7 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 139,
+					"uid": 197,
 					"instanceVariables": {},
 					"behaviors": {
 						"Pin": {
@@ -1049,7 +1049,7 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 140,
+					"uid": 198,
 					"instanceVariables": {},
 					"behaviors": {
 						"Pin": {
@@ -1084,7 +1084,7 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 141,
+					"uid": 199,
 					"instanceVariables": {},
 					"behaviors": {
 						"Pin": {
@@ -1119,7 +1119,7 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 142,
+					"uid": 200,
 					"instanceVariables": {},
 					"behaviors": {
 						"Pin": {
@@ -1154,7 +1154,7 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 143,
+					"uid": 201,
 					"instanceVariables": {},
 					"behaviors": {
 						"Pin": {
@@ -1189,7 +1189,7 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 163,
+					"uid": 202,
 					"instanceVariables": {},
 					"behaviors": {
 						"Pin": {
@@ -1224,7 +1224,7 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 164,
+					"uid": 203,
 					"instanceVariables": {
 						"diretionH": -1,
 						"jumping": false,
@@ -1276,7 +1276,7 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 165,
+					"uid": 204,
 					"instanceVariables": {},
 					"behaviors": {
 						"Pin": {
@@ -1311,7 +1311,7 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 166,
+					"uid": 205,
 					"instanceVariables": {},
 					"behaviors": {
 						"Pin": {
@@ -1346,7 +1346,7 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 167,
+					"uid": 206,
 					"instanceVariables": {},
 					"behaviors": {
 						"Pin": {
@@ -1381,7 +1381,7 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 168,
+					"uid": 207,
 					"instanceVariables": {},
 					"behaviors": {
 						"Pin": {
@@ -1416,7 +1416,7 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 145,
+					"uid": 208,
 					"instanceVariables": {
 						"Jumping": false,
 						"walking": false,
@@ -1461,7 +1461,7 @@
 					}
 				}
 			],
-			"sid": 835612243666929,
+			"sid": 680366857643221,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"color": [
@@ -1511,7 +1511,7 @@
 						"initially-visible": true,
 						"origin": "bottom"
 					},
-					"uid": 146,
+					"uid": 209,
 					"instanceVariables": {},
 					"behaviors": {
 						"Timer": {
@@ -1544,7 +1544,7 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 147,
+					"uid": 210,
 					"instanceVariables": {},
 					"behaviors": {
 						"Tween": {
@@ -1592,7 +1592,7 @@
 						"initially-visible": true,
 						"origin": "center"
 					},
-					"uid": 148,
+					"uid": 211,
 					"instanceVariables": {},
 					"behaviors": {
 						"Timer": {
@@ -1625,7 +1625,7 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 149,
+					"uid": 212,
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
@@ -1654,7 +1654,7 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 150,
+					"uid": 213,
 					"instanceVariables": {},
 					"behaviors": {
 						"Tween": {
@@ -1689,7 +1689,7 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 151,
+					"uid": 214,
 					"instanceVariables": {},
 					"behaviors": {
 						"Tween": {
@@ -1737,7 +1737,7 @@
 						"initially-visible": false,
 						"origin": "center"
 					},
-					"uid": 152,
+					"uid": 215,
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
@@ -1766,7 +1766,7 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 153,
+					"uid": 216,
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
@@ -1795,7 +1795,7 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 154,
+					"uid": 217,
 					"instanceVariables": {
 						"animacao": 0
 					},
@@ -1826,7 +1826,7 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 155,
+					"uid": 218,
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
@@ -1855,7 +1855,7 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 156,
+					"uid": 219,
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
@@ -1884,7 +1884,7 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 157,
+					"uid": 220,
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
@@ -1913,7 +1913,7 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 158,
+					"uid": 221,
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
@@ -1942,7 +1942,7 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 159,
+					"uid": 222,
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
@@ -1971,16 +1971,45 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 160,
+					"uid": 223,
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 256,
-						"y": 64,
-						"width": 32,
-						"height": 32,
-						"originX": 0.244,
-						"originY": 0.264,
+						"x": 257.0000753128736,
+						"y": 63.39288941520293,
+						"width": 30.39877926643744,
+						"height": 30.39877926643744,
+						"originX": 0.5037037037037037,
+						"originY": 0.14074074074074075,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "rosto",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 224,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 89.4266018907039,
+						"y": 64.16195660949033,
+						"width": 96,
+						"height": 96,
+						"originX": 0.572289156626506,
+						"originY": 0.6702127659574468,
 						"color": [
 							1,
 							1,
@@ -1992,7 +2021,7 @@
 					}
 				}
 			],
-			"sid": 814660768554257,
+			"sid": 548872277585490,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"color": [
@@ -2033,7 +2062,7 @@
 						"image-scale-y": 1,
 						"image-angle": 0
 					},
-					"uid": 161,
+					"uid": 225,
 					"instanceVariables": {},
 					"behaviors": {
 						"Fade": {
@@ -2073,7 +2102,7 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 162,
+					"uid": 226,
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
@@ -2094,7 +2123,7 @@
 					}
 				}
 			],
-			"sid": 797036901947280,
+			"sid": 671888354159042,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"color": [
@@ -2119,7 +2148,7 @@
 			"global": false
 		}
 	],
-	"sid": 847471338690475,
+	"sid": 210042547099151,
 	"nonworld-instances": [],
 	"effectTypes": [],
 	"width": 5120,

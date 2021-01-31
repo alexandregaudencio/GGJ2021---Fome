@@ -1668,8 +1668,37 @@
 						"y": 64,
 						"width": 32,
 						"height": 32,
-						"originX": 0.244,
-						"originY": 0.264,
+						"originX": 0.5037037037037037,
+						"originY": 0.14074074074074075,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "rosto",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 172,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 96,
+						"y": 64,
+						"width": 96,
+						"height": 96,
+						"originX": 0.572289156626506,
+						"originY": 0.6702127659574468,
 						"color": [
 							1,
 							1,

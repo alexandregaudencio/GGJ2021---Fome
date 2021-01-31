@@ -71,6 +71,14 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "Audio",
+			"name": "Audio",
+			"author": "Scirra",
+			"version": "r225",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "Bullet",
 			"name": "Bullet",
@@ -179,7 +187,8 @@
 			"zoneLimiter",
 			"moeda",
 			"Text",
-			"Sprite"
+			"Sprite",
+			"Audio"
 		],
 		"subfolders": [
 			{
@@ -244,7 +253,8 @@
 					"estrela1",
 					"estrela3",
 					"estrelaescura3",
-					"estrelaescura2"
+					"estrelaescura2",
+					"rosto"
 				],
 				"subfolders": [],
 				"name": "HUD do jogo"
@@ -267,7 +277,8 @@
 			"Layout 1",
 			"Layout 2",
 			"Layout 3",
-			"Creditos"
+			"Creditos",
+			"Layout 4"
 		],
 		"subfolders": []
 	},

@@ -2735,6 +2735,17 @@
 							"parameters": {
 								"color": "rgbEx(0, 0, 0)"
 							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 228728141552117,
+							"parameters": {
+								"audio-file": "som da moeda",
+								"loop": "not-looping",
+								"volume": "-3",
+								"tag-optional": "\"\""
+							}
 						}
 					],
 					"sid": 312067456553612
