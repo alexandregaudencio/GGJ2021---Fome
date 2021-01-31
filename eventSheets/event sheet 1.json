@@ -179,6 +179,17 @@
 								"volume": "10",
 								"tag-optional": "\"\""
 							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 147464150438183,
+							"parameters": {
+								"audio-file": "Beach_Waves-Atribution_3.0",
+								"loop": "looping",
+								"volume": "-13",
+								"tag-optional": "\"\""
+							}
 						}
 					],
 					"sid": 444400986202435,
