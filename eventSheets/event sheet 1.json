@@ -119,6 +119,11 @@
 					],
 					"actions": [
 						{
+							"id": "stop-all",
+							"objectClass": "Audio",
+							"sid": 492179649171685
+						},
+						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
 							"sid": 151779498185294,
@@ -167,11 +172,11 @@
 						{
 							"id": "play",
 							"objectClass": "Audio",
-							"sid": 909228849409706,
+							"sid": 941080286300453,
 							"parameters": {
 								"audio-file": "musica_game_jamoficial",
 								"loop": "looping",
-								"volume": "0",
+								"volume": "10",
 								"tag-optional": "\"\""
 							}
 						}
@@ -490,6 +495,11 @@
 					],
 					"actions": [
 						{
+							"id": "stop-all",
+							"objectClass": "Audio",
+							"sid": 654989817730216
+						},
+						{
 							"id": "play",
 							"objectClass": "Audio",
 							"sid": 964726622585220,
@@ -562,6 +572,7 @@
 							"id": "play",
 							"objectClass": "Audio",
 							"sid": 522653684275279,
+							"disabled": true,
 							"parameters": {
 								"audio-file": "Morte_som",
 								"loop": "not-looping",
@@ -592,6 +603,146 @@
 			"isActiveOnStart": true,
 			"children": [
 				{
+					"eventType": "variable",
+					"name": "indexSound",
+					"type": "number",
+					"initialValue": "3",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 540692555585066
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "soundWalk",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "every-x-seconds",
+									"objectClass": "System",
+									"sid": 417895442676183,
+									"parameters": {
+										"interval-seconds": "0.3"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 577226365412277,
+									"parameters": {
+										"variable": "indexSound",
+										"value": "choose(1,2,3)"
+									}
+								}
+							],
+							"sid": 378185600570933,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 655039500575365,
+											"parameters": {
+												"variable": "indexSound",
+												"comparison": 0,
+												"value": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 580559206452891,
+											"parameters": {
+												"audio-file": "Passo_1",
+												"loop": "not-looping",
+												"volume": "0",
+												"tag-optional": "\"passo1\""
+											}
+										}
+									],
+									"sid": 578636385686091
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 105479817367382,
+											"parameters": {
+												"variable": "indexSound",
+												"comparison": 0,
+												"value": "2"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 537505205991730,
+											"parameters": {
+												"audio-file": "Passo_2",
+												"loop": "not-looping",
+												"volume": "0",
+												"tag-optional": "\"passo2\""
+											}
+										}
+									],
+									"sid": 343928669255027
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 750599936723280,
+											"parameters": {
+												"variable": "indexSound",
+												"comparison": 0,
+												"value": "3"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 327763145202854,
+											"parameters": {
+												"audio-file": "Passo_3",
+												"loop": "not-looping",
+												"volume": "0",
+												"tag-optional": "\"passo3\""
+											}
+										}
+									],
+									"sid": 903120429429364
+								},
+								{
+									"eventType": "block",
+									"conditions": [],
+									"actions": [],
+									"sid": 216259111375059
+								}
+							]
+						}
+					],
+					"sid": 341030317318245
+				},
+				{
 					"eventType": "block",
 					"conditions": [
 						{
@@ -612,7 +763,56 @@
 							}
 						}
 					],
-					"sid": 833533397423029
+					"sid": 833533397423029,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "player",
+									"sid": 376429619918343,
+									"parameters": {
+										"instance-variable": "walking"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 799172526484136,
+									"parameters": {
+										"group-name": "\"soundWalk\"",
+										"state": "activated"
+									}
+								}
+							],
+							"sid": 619863774401607
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 192457688509221
+								}
+							],
+							"actions": [
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 703963853853110,
+									"parameters": {
+										"group-name": "\"soundWalk\"",
+										"state": "deactivated"
+									}
+								}
+							],
+							"sid": 897555685113011
+						}
+					]
 				},
 				{
 					"eventType": "block",
@@ -631,6 +831,15 @@
 							"parameters": {
 								"instance-variable": "Jumping",
 								"value": "true"
+							}
+						},
+						{
+							"id": "set-group-active",
+							"objectClass": "System",
+							"sid": 538425162519547,
+							"parameters": {
+								"group-name": "\"soundWalk\"",
+								"state": "deactivated"
 							}
 						}
 					],

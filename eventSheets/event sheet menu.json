@@ -52,6 +52,11 @@
 			],
 			"actions": [
 				{
+					"id": "stop-all",
+					"objectClass": "Audio",
+					"sid": 561139367733516
+				},
+				{
 					"id": "pin-to-object-properties",
 					"objectClass": "Menu_jogar",
 					"sid": 423031718874664,
@@ -156,12 +161,12 @@
 				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 315787620286694,
+					"sid": 103705732581900,
 					"parameters": {
 						"audio-file": "Musica_Loop_2",
 						"loop": "looping",
 						"volume": "0",
-						"tag-optional": "\"\""
+						"tag-optional": "\"MusicMenu\""
 					}
 				},
 				{
