@@ -1,16 +1,10 @@
 {
-	"name": "enemyImpulse",
+	"name": "Sprite",
 	"plugin-id": "Sprite",
-	"sid": 673221596910418,
+	"sid": 532223230932749,
 	"isGlobal": false,
 	"instanceVariables": [],
-	"behaviorTypes": [
-		{
-			"behaviorId": "Pin",
-			"name": "Pin",
-			"sid": 571564054851225
-		}
-	],
+	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
 		"items": [
@@ -19,17 +13,17 @@
 					{
 						"width": 250,
 						"height": 250,
-						"originX": 0.5,
-						"originY": 1,
+						"originX": 0.244,
+						"originY": 0.264,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 2853925,
+						"imageSpriteId": 5668777,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 514045657812980,
+				"sid": 560141669491631,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

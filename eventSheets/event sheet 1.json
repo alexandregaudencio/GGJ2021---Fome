@@ -121,10 +121,10 @@
 						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
-							"sid": 841140219878211,
+							"sid": 151779498185294,
 							"parameters": {
 								"variable": "HeightEnemyImpulse",
-								"value": "2*enemyImpulse.Height-0.1*enemyImpulse.Height"
+								"value": "2*enemyImpulse.Height"
 							}
 						},
 						{
@@ -150,9 +150,16 @@
 						},
 						{
 							"id": "set-opacity",
+							"objectClass": "startPosition",
+							"sid": 825069271042042,
+							"parameters": {
+								"opacity": "0"
+							}
+						},
+						{
+							"id": "set-opacity",
 							"objectClass": "enemyImpulse",
 							"sid": 637476854179628,
-							"disabled": true,
 							"parameters": {
 								"opacity": "0"
 							}
@@ -666,6 +673,25 @@
 								"variable": "vida",
 								"comparison": 4,
 								"value": "0"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 648564038379049,
+							"parameters": {
+								"variable": "pressionando"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 781543642264206,
+							"parameters": {
+								"variable": "contandoMoedas",
+								"comparison": 2,
+								"value": "6"
 							}
 						}
 					],
@@ -1438,17 +1464,7 @@
 						{
 							"id": "compare-two-values",
 							"objectClass": "System",
-							"sid": 887581296692730,
-							"parameters": {
-								"first-value": "(player.Y)-(enemies.Y)",
-								"comparison": 5,
-								"second-value": "200"
-							}
-						},
-						{
-							"id": "compare-two-values",
-							"objectClass": "System",
-							"sid": 298708886409101,
+							"sid": 587925606430862,
 							"parameters": {
 								"first-value": "enemies.diretionH*((player.X)-(enemies.X))",
 								"comparison": 5,
@@ -1456,11 +1472,14 @@
 							}
 						},
 						{
-							"id": "is-on-floor",
-							"objectClass": "player",
-							"sid": 196163782248686,
-							"disabled": true,
-							"behaviorType": "Platform"
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 927860471764007,
+							"parameters": {
+								"first-value": "(player.Y)-(enemies.Y)",
+								"comparison": 3,
+								"second-value": "-HeightEnemyImpulse"
+							}
 						}
 					],
 					"actions": [
@@ -1483,9 +1502,90 @@
 							"parameters": {
 								"control": "jump"
 							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "enemies",
+							"sid": 393390912710772,
+							"parameters": {
+								"instance-variable": "jumping",
+								"value": "true"
+							}
 						}
 					],
 					"sid": 554959948733265
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 603626498112220
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "enemies",
+							"sid": 837216374662770,
+							"disabled": true,
+							"parameters": {
+								"instance-variable": "jumping",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 731679286396839,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-on-floor",
+									"objectClass": "enemies",
+									"sid": 875128250756592,
+									"behaviorType": "Platform"
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "enemies",
+									"sid": 265268438022024,
+									"parameters": {
+										"instance-variable": "jumping",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "enemies",
+									"sid": 864747087927826,
+									"parameters": {
+										"instance-variable": "walk",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 866439728728435
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Text",
+							"sid": 402799468954249,
+							"parameters": {
+								"text": "player.Y-enemies.Y"
+							}
+						}
+					],
+					"sid": 805539845501337
 				},
 				{
 					"eventType": "block",
@@ -1571,6 +1671,56 @@
 							]
 						}
 					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "enemies",
+							"sid": 485376164857506,
+							"parameters": {
+								"instance-variable": "jumping"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "enemies",
+							"sid": 738901645367271,
+							"parameters": {
+								"animation": "\"jump\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 495115926741465
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "enemies",
+							"sid": 508846243459563,
+							"parameters": {
+								"instance-variable": "walk"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "enemies",
+							"sid": 721507744261298,
+							"parameters": {
+								"animation": "\"walk\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 665391986732665
 				}
 			],
 			"sid": 733393450647818
@@ -1707,16 +1857,6 @@
 				{
 					"eventType": "block",
 					"conditions": [
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 549355072450128,
-							"parameters": {
-								"variable": "contandoMoedas",
-								"comparison": 0,
-								"value": "6"
-							}
-						},
 						{
 							"id": "compare-eventvar",
 							"objectClass": "System",
@@ -2138,6 +2278,81 @@
 					"eventType": "block",
 					"conditions": [
 						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 256853294870017,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "retornar"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 567597400507482,
+							"parameters": {
+								"variable": "contandoMoedas",
+								"comparison": 0,
+								"value": "6"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 633752851610857,
+							"parameters": {
+								"variable": "pausar"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 811905441679428,
+							"parameters": {
+								"variable": "pausar",
+								"value": "false"
+							}
+						},
+						{
+							"id": "tween-two-properties",
+							"objectClass": "retornar",
+							"sid": 712976636861448,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"\"",
+								"property": "scale",
+								"end-x": "1.2",
+								"end-y": "1.2",
+								"time": "0.5",
+								"ease": "easeoutelastic",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "yes"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 699551993636688,
+							"parameters": {
+								"seconds": "1.0"
+							}
+						},
+						{
+							"callFunction": "transicao",
+							"sid": 387393979734094
+						}
+					],
+					"sid": 948138139441371,
+					"disabled": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
 							"id": "on-timer",
 							"objectClass": "tempo",
 							"sid": 794977815139406,
@@ -2160,9 +2375,9 @@
 						{
 							"id": "set-font-color",
 							"objectClass": "tempo",
-							"sid": 710646107612832,
+							"sid": 568542084753031,
 							"parameters": {
-								"color": "rgbEx(255, 255, 255)"
+								"color": "rgbEx(50,50,50)"
 							}
 						},
 						{
@@ -2429,9 +2644,9 @@
 						{
 							"id": "set-font-color",
 							"objectClass": "contadorDeMoedas",
-							"sid": 556828186750933,
+							"sid": 203978988701674,
 							"parameters": {
-								"color": "rgbEx(255, 255, 255)"
+								"color": "rgbEx(50, 50, 50)"
 							}
 						},
 						{

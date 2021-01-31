@@ -32,6 +32,16 @@
 			"sid": 798793479308472
 		},
 		{
+			"eventType": "variable",
+			"name": "timeAnimation",
+			"type": "number",
+			"initialValue": "270",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 938308087224677
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -183,10 +193,10 @@
 						{
 							"id": "set-position",
 							"objectClass": "Menu_botaoIniciar",
-							"sid": 298528283449713,
+							"sid": 894570475013585,
 							"parameters": {
 								"x": "Menu_botaoIniciar.X",
-								"y": "Menu_botaoIniciar.Y + (100 * dt)"
+								"y": "Menu_botaoIniciar.Y + (timeAnimation* dt)"
 							}
 						}
 					],
@@ -218,10 +228,10 @@
 						{
 							"id": "set-position",
 							"objectClass": "Menu_botaoIniciar",
-							"sid": 641974312663071,
+							"sid": 667434661971973,
 							"parameters": {
 								"x": "Menu_botaoIniciar.X",
-								"y": "Menu_botaoIniciar.Y - (100 * dt)"
+								"y": "Menu_botaoIniciar.Y - (timeAnimation* dt)"
 							}
 						}
 					],
@@ -252,10 +262,10 @@
 						{
 							"id": "set-position",
 							"objectClass": "Menu_logo",
-							"sid": 873901792051836,
+							"sid": 793793322954282,
 							"parameters": {
 								"x": "Menu_logo.X ",
-								"y": "Menu_logo.Y  - (100 * dt)"
+								"y": "Menu_logo.Y  - (timeAnimation* dt)"
 							}
 						}
 					],
@@ -287,10 +297,10 @@
 						{
 							"id": "set-position",
 							"objectClass": "Menu_logo",
-							"sid": 400519616482589,
+							"sid": 599546152805058,
 							"parameters": {
 								"x": "Menu_logo.X ",
-								"y": "Menu_logo.Y  + (100 * dt)"
+								"y": "Menu_logo.Y  + (timeAnimation* dt)"
 							}
 						}
 					],
@@ -312,9 +322,9 @@
 						{
 							"id": "set-position",
 							"objectClass": "Menu_barco",
-							"sid": 840029793311182,
+							"sid": 706720264520910,
 							"parameters": {
-								"x": "Menu_barco.X + (100*dt)",
+								"x": "Menu_barco.X + (timeAnimation*dt)",
 								"y": "Menu_barco.Y"
 							}
 						}
@@ -393,9 +403,9 @@
 				{
 					"id": "wait",
 					"objectClass": "System",
-					"sid": 284839761409022,
+					"sid": 569744123303378,
 					"parameters": {
-						"seconds": "3.0"
+						"seconds": "1"
 					}
 				},
 				{
@@ -488,9 +498,9 @@
 				{
 					"id": "wait",
 					"objectClass": "System",
-					"sid": 415990470485808,
+					"sid": 400708277357852,
 					"parameters": {
-						"seconds": "3.0"
+						"seconds": "1"
 					}
 				},
 				{
@@ -570,9 +580,9 @@
 				{
 					"id": "wait",
 					"objectClass": "System",
-					"sid": 411970200342030,
+					"sid": 272765164810869,
 					"parameters": {
-						"seconds": "3.0"
+						"seconds": "1"
 					}
 				},
 				{
@@ -768,14 +778,6 @@
 					"sid": 351508523005334,
 					"parameters": {
 						"seconds": "1.0"
-					}
-				},
-				{
-					"id": "go-to-layout",
-					"objectClass": "System",
-					"sid": 677090547833118,
-					"parameters": {
-						"layout": "Tutorial"
 					}
 				}
 			],
