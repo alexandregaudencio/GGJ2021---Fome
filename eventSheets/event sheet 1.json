@@ -170,6 +170,14 @@
 							}
 						},
 						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 147117283430720,
+							"parameters": {
+								"seconds": "0.1"
+							}
+						},
+						{
 							"id": "play",
 							"objectClass": "Audio",
 							"sid": 941080286300453,
